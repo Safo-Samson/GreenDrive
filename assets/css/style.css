@@ -291,6 +291,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 
 .navbar a:hover:before,
 .navbar li:hover>a:before,
+
 .navbar .active:before {
   visibility: visible;
   width: 25px;
