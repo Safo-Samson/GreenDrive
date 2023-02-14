@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: $tertiary;
+  padding: 30px 0;
+  color: $secondary;
+  font-size: 14px;
+  text-align: center;
+
+  .credits {
+    padding-top: 5px;
+    font-size: 13px;
+    a {
+      color: $primary;
+    }
+  }
+}
