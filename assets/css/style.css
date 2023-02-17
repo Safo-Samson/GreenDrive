@@ -481,42 +481,45 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
   display: block;
 }
 
-/*-------------------------------------------------------------
-    Search box
---------------------------------------------------------------*/
-
- #Search-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #Search-box  input{
-    width: 120%;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #12db58;
-    border-radius: 5px;
-  }
-  
-  #Search-box  button{
-    width: 40%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: rgb(21, 148, 191);
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/green_landing_image.jpg") center; /* background of the home page*/
+  /* background: url("../img/green_landing_image.jpg") center;  */
+  /* background: url("../img/_mercedes_electric_2024.jpeg") currentColor;  */
+  background: url("../img/mercedes_electric_2023.jpg") center; 
+  /* background: url("../img/instagram_ev.jpg") center; */
   background-size: cover;
+  background-attachment: scroll;
+}
+
+#hero .slideshow {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#hero .slideshow-image {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: slideshow 10s infinite;
+}
+
+@keyframes slideshow {
+  0% {
+    background: url("../img/_mercedes_electric_2024.jpeg"); 
+  }
+  25% {
+    background: url("../img/mercedes_electric_2023.jpg")
+  }
+  50% {
+    background: url("../img/mercedes_electric_2023.jpg");
+  }
 }
 
 #hero .container {
@@ -535,7 +538,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #222222;
+  color: white;
 }
 
 #hero h2 {
@@ -616,6 +619,22 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 .fa-arrow-right-long{
   right: 15px;
 }
+
+/*-------------------------------------------------------------
+    Font alignment in hero
+--------------------------------------------------------------*/
+.inner{
+  text-align: left;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -945,8 +964,20 @@ section {
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
-  background: #fff;
+  /* background: #fff; */
+  background: rgb(106, 150, 106);
+  background: url("../img/green_landing_image.jpg");
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+.services h1{
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: white;
+  text-align: center;
+  /* padding-left: 4%; */
 }
 
 .services .icon-box .icon {
@@ -993,6 +1024,8 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: black; 
+  text-align: left;
 }
 
 .services .iconbox-blue i {
@@ -1403,6 +1436,88 @@ section {
     transform: rotate(360deg);
   }
 }
+
+
+/*-------------------------------------------------------------
+cost-tracking section in main page
+ -------------------------------------------------------------*/
+ #cost{
+
+ }
+
+ #cost h1{
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: white;
+  text-align: right;
+  padding-right: 4%;
+ }
+/*-------------------------------------------------------------
+Professionals section in main page
+ -------------------------------------------------------------*/
+#Professionals{
+
+}
+
+#Professionals h1{
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: white;
+  text-align: left;
+  padding-left: 4%;
+}
+
+#Professionals img{
+    float: right;
+    margin-right: 4%; /* add some space between the image and the content */
+}
+
+ 
+/*-------------------------------------------------------------
+    Search box
+--------------------------------------------------------------*/
+
+#Search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Search-box  input{
+  width: 120%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #12db58;
+  border-radius: 5px;
+}
+
+#Search-box  button{
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(21, 148, 191);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#aim {
+padding: 2% 4% 2% 4%; /* for the paragraphs on the homepage after herowhat*/  
+}
+
+#aim h1{
+margin: 0;
+font-size: 48px;
+font-weight: 700;
+line-height: 56px;
+color: white;
+}
+
+
 
 /*--------------------------------------------------------------
 # Footer

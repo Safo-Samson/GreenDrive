@@ -1299,15 +1299,19 @@
 }
 
 .align-items-start {
-  align-items: flex-start !important;
+  align-items: flex-start  /*!important*/;
 }
 
 .align-items-end {
-  align-items: flex-end !important;
+  align-items: flex-end /*!important*/;
 }
 
+.align-items-left-end{
+  text-align: left;
+  align-items: end;
+}
 .align-items-center {
-  align-items: center !important;
+  align-items: center /*!important; */
 }
 
 .align-items-baseline {
