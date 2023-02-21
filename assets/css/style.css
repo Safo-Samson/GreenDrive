@@ -199,7 +199,7 @@ If two elements have the same z-index value, the element that appears later in t
 
 #header .logo img {
   max-height: 50px;
-  /* min-width: 80px; added this myself to make sure the logo was wide and clear */
+  /* min-width: 90px; added this myself to make sure the logo was wide and clear but realised this widens up the space not the actual image */
 }
 
 @media (max-width: 992px) {
