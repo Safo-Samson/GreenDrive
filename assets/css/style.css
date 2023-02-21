@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  color: #51cdbe;;
+  color: green;;
   /* color: #34b7a7; */
   text-decoration: none;
 }
@@ -27,7 +27,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
-  color: rgb(21, 240, 232); /*setting all headers to this color*/
+  color: green; /*setting all headers to this color*/
 
 }
 
@@ -37,7 +37,7 @@ h6 {
 }
 
 #main .fa-solid{
-  color: #34b7a7;   /*trying to add a back arrow to the page*/
+  color: green;   /*trying to add a back arrow to the page*/
   position: fixed;
   visibility:visible;
   top: 100px;
@@ -94,7 +94,7 @@ The :before pseudo-element is used to insert content before an element's content
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #34b7a7;
+  border: 6px solid green;
   border-top-color: #e8e2e2;
   border-radius: 50%;
   width: 60px;
@@ -141,7 +141,7 @@ the . operator is used to style elements based on their class, and the # operato
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #34b7a7;
+  background: green;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -177,6 +177,7 @@ If two elements have the same z-index value, the element that appears later in t
 --------------------------------------------------------------*/
 #header {
   background: #e8e2e2;
+  background: rgb(147, 222, 147);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
   z-index: 997;
   padding: 15px 0;
@@ -198,6 +199,7 @@ If two elements have the same z-index value, the element that appears later in t
 
 #header .logo img {
   max-height: 50px;
+  /* min-width: 80px; added this myself to make sure the logo was wide and clear */
 }
 
 @media (max-width: 992px) {
@@ -225,7 +227,7 @@ If two elements have the same z-index value, the element that appears later in t
 
 .header-social-links a:hover {
   /* color: #34b7a7; */
-  color: #34b7a7;
+  color: green;
 }
 
 /*--------------------------------------------------------------
@@ -283,7 +285,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #34b7a7;
+  background-color: green;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -339,7 +341,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #34b7a7;
+  color:green;
 }
 
 .navbar .dropdown:hover>ul {
@@ -439,7 +441,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #34b7a7;
+  color: green;
 }
 
 .navbar-mobile .getstarted,
@@ -474,7 +476,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #34b7a7;
+  color: green;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -559,7 +561,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
   transition: 0.5s;
   margin-top: 30px;
   color: #fff;
-  background: #34b7a7;
+  background: green;
 }
 
 #hero .btn-about:hover {
@@ -602,7 +604,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 }
 
 .fa-solid{
-  color: #34b7a7;   /*trying to add a back arrow to the page*/
+  color: green;   /*trying to add a back arrow to the page*/
   position: fixed;
   visibility:visible;
   top: 100px;
@@ -667,7 +669,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #34b7a7;
+  background: green;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -711,8 +713,8 @@ section {
 }
 
 .cta .cta-btn:hover {
-  background: #34b7a7;
-  border: 2px solid #34b7a7;
+  background: green;
+  border: 2px solid green;
 }
 
 @media (max-width: 1024px) {
@@ -736,7 +738,7 @@ section {
   font-weight: 700;
   font-size: 26px;
   /* color: #555555; */
- color: rgb(21, 240, 232); /*change the SOFTWARE ENGINEER AND DEVELOPER to this color*/
+ color: green;; /*change the SOFTWARE ENGINEER AND DEVELOPER to this color*/
 }
 
 .about .content ul {
@@ -751,7 +753,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 2px;
-  color: #34b7a7;
+  color: green;
   /* color:rgb(210, 204, 204) change the underline of the about color to white */
 }
 
@@ -793,7 +795,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #34b7a7;
+  background-color: green;
 }
 
 /*--------------------------------------------------------------
@@ -802,7 +804,7 @@ section {
 .facts .counters span {
   font-size: 48px;
   display: block;
-  color: #34b7a7;
+  color: green;
 }
 
 .facts .counters p {
@@ -888,11 +890,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #34b7a7;
+  border: 1px solid green;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #34b7a7;
+  background-color: green;
 }
 
 /*--------------------------------------------------------------
@@ -903,7 +905,7 @@ section {
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: rgb(21, 240, 232);
+  color: green;
 }
 
 .resume .resume-item {
@@ -930,7 +932,7 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #34b7a7;
+  color: green;
 }
 
 .resume .resume-item ul {
@@ -954,7 +956,7 @@ section {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #34b7a7;
+  border: 2px solid green;
 }
 
 /*--------------------------------------------------------------
@@ -964,11 +966,11 @@ section {
   text-align: center;
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
-  /* background: #fff; */
-  background: rgb(106, 150, 106);
-  background: url("../img/green_landing_image.jpg");
+  /* background: rgb(106, 150, 106); */
+  background: url("../img/_mercedes_electric_2024.jpeg");
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
 }
+
 
 .services h1{
   margin: 0;
@@ -1131,7 +1133,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #34b7a7;
+  background: green
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1208,7 +1210,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #78d9cd;
+  color: green
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1244,11 +1246,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #34b7a7;
+  border: 1px solid green
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #34b7a7;
+  background-color: green
 }
 
 .portfolio-details .portfolio-info {
@@ -1291,9 +1293,14 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact{
+  background: url("../img/green_landing_image.jpg");
+  background-repeat:round;
+}
 .contact .info {
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
+  background: green;
 }
 
 .contact .info i {
@@ -1302,7 +1309,8 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #effbf9;
+  /* background: #effbf9; */
+  background: red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1322,7 +1330,8 @@ section {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #555555;
+  /* color: #555555; */
+  color: yellow;
 }
 
 .contact .info .email,
@@ -1491,7 +1500,7 @@ Professionals section in main page
   width: 120%;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #12db58;
+  border: 2px solid green;
   border-radius: 5px;
 }
 
