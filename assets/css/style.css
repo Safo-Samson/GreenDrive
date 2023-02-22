@@ -3,7 +3,9 @@ body {
   font-family: "Open Sans", sans-serif;
   /* color: #444444; */
   color: #e8e2e2;  /*changing the font color to light white*/
-  background-color: #252222; /*setting my own background color*/
+ /*setting my own background color*/
+ background-color: white;
+ /* background: url("/assets/img/backgroundTest.jpg"); */
 }
 
 a {
@@ -171,13 +173,16 @@ If two elements have the same z-index value, the element that appears later in t
   opacity: 1;
 }
 
-
+.gradient {
+  background-image: linear-gradient(to bottom, red 0%, blue 50%);
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #e8e2e2;
-  background: rgb(147, 222, 147);
+  /* background: #e8e2e2;
+  background: rgb(147, 222, 147); */
+  background: linear-gradient(to right, rgb(1, 48, 1) 20%,rgb(66, 169, 66) 30%);
   box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
   z-index: 997;
   padding: 15px 0;
@@ -199,7 +204,7 @@ If two elements have the same z-index value, the element that appears later in t
 
 #header .logo img {
   max-height: 50px;
-  /* min-width: 90px; added this myself to make sure the logo was wide and clear but realised this widens up the space not the actual image */
+  min-width: 190px; /*added this myself to make sure the logo was wide and clear but realised this widens up the space not the actual image */
 }
 
 @media (max-width: 992px) {
@@ -261,7 +266,7 @@ If two elements have the same z-index value, the element that appears later in t
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: #888888; /* this is the color of home,about,resume etc on the header when not selected*/
+  color: #000000; /* this is the color of home,about,resume etc on the header when not selected*/
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
@@ -304,6 +309,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 .navbar .active:focus,
 .navbar li:hover>a {
   color: #222222;
+  color: #ffffff;
 }
 
 .navbar .dropdown ul {
@@ -342,6 +348,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
   color:green;
+
 }
 
 .navbar .dropdown:hover>ul {
@@ -491,8 +498,10 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
   height: 100vh;
   /* background: url("../img/green_landing_image.jpg") center;  */
   /* background: url("../img/_mercedes_electric_2024.jpeg") currentColor;  */
-  background: url("../img/mercedes_electric_2023.jpg") center; 
-  /* background: url("../img/instagram_ev.jpg") center; */
+  /* background: url("../img/mercedes_electric_2023.jpg") center;  */
+  background: url("../img/green\ drive-5.svg") center; 
+  background: url("../img/forestwithCar.jpg") center;
+  /* background: url("../img/forestWithClassicCar.jpg") center; */
   background-size: cover;
   background-attachment: scroll;
 }
@@ -738,7 +747,7 @@ section {
   font-weight: 700;
   font-size: 26px;
   /* color: #555555; */
- color: green;; /*change the SOFTWARE ENGINEER AND DEVELOPER to this color*/
+ color: red;; /*change the SOFTWARE ENGINEER AND DEVELOPER to this color*/
 }
 
 .about .content ul {
@@ -753,7 +762,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 2px;
-  color: green;
+  color: yellow;
   /* color:rgb(210, 204, 204) change the underline of the about color to white */
 }
 
@@ -905,7 +914,7 @@ section {
   font-weight: 400;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: green;
+  color: red;
 }
 
 .resume .resume-item {
@@ -932,7 +941,7 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
-  color: green;
+  color: yellow;
 }
 
 .resume .resume-item ul {
@@ -956,7 +965,7 @@ section {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid green;
+  border: 2px solid blue;
 }
 
 /*--------------------------------------------------------------
@@ -967,7 +976,9 @@ section {
   padding: 70px 20px 80px 20px;
   transition: all ease-in-out 0.3s;
   /* background: rgb(106, 150, 106); */
-  background: url("../img/_mercedes_electric_2024.jpeg");
+  background: url("../img/forestWithClassicCar.jpg");
+  background: rgb(166, 164, 161);
+
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -1133,7 +1144,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: green
+  background: indigo;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1210,7 +1221,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: green
+  color: rgb(128, 0, 87)
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1459,7 +1470,7 @@ cost-tracking section in main page
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: white;
+  color: black;
   text-align: right;
   padding-right: 4%;
  }
@@ -1475,7 +1486,7 @@ Professionals section in main page
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: white;
+  color: black;
   text-align: left;
   padding-left: 4%;
 }
@@ -1523,10 +1534,16 @@ margin: 0;
 font-size: 48px;
 font-weight: 700;
 line-height: 56px;
-color: white;
+color: black;
 }
 
+/***************************************************
+cursor 
+****************************************************/
 
+.hollow-circle {
+  cursor: url("/assets/img/circle-cursor.svg") 16 16, auto;
+}
 
 /*--------------------------------------------------------------
 # Footer
