@@ -1551,10 +1551,15 @@ Our services
   font-weight: bolder;
 }
 
+.OurServices p{
+  width: 100px;
+  height: 700px;
+}
+
 .OurServices .ServiceContainer{
     max-width: 600px;
-    margin-top: 20px;
-    margin-left: 750px; /*making the container appear on top left*/
+    margin-top: 40px;
+    margin-left: 420px; /*making the container appear on top left*/
     padding:  20px 30px 20px 30px;
     background-color: #4cdd58;
     border-radius: 10px; /*to make the corners of the forms rounded*/
