@@ -1538,6 +1538,68 @@ color: black;
 }
 
 /***************************************************
+Our services
+****************************************************/
+
+.OurServices{
+  background: url("/assets/img/forestWithClassicCar.jpg"); 
+  padding: 2% 4% 2% 4%;
+}
+
+.OurServices h1{
+  color: white;
+  font-weight: bolder;
+}
+
+.OurServices .ServiceContainer{
+    max-width: 600px;
+    margin-top: 20px;
+    margin-left: 750px; /*making the container appear on top left*/
+    padding:  20px 30px 20px 30px;
+    background-color: #4cdd58;
+    border-radius: 10px; /*to make the corners of the forms rounded*/
+
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); */
+    /* position: absolute; */
+  }
+  
+  form {
+    /*display: block; /*making it flex will make it lie side by side*/
+    border-radius: 10px;  
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    margin-bottom: 5px;
+  }
+  
+  .OurServices .label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border:rgb(21, 224, 21); /*find out*/
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  button[type="submit"] { /*this is called attribute selector*/
+    margin-left: 40%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #01080e;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #005ca3;
+  }
+
+/***************************************************
 cursor 
 ****************************************************/
 
