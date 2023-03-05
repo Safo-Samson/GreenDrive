@@ -30,7 +30,6 @@
   <script src="https://kit.fontawesome.com/d11fac47f6.js" crossorigin="anonymous"></script>
 
   <script src="assets/js/serviceFinder.js"></script>
-
 </head>
 
 <body>
@@ -71,34 +70,70 @@
     <section id="OurServices" class="OurServices">
 
       <div class="ServiceContainer"> <!--all these are different classes-->
-        <h1>Service Finder</h1>
+        <h1>Service Finder by Car Details</h1>
 
 
         <div>
           <form action="#" method="post"> <!--for the forms with label, check the test.html file-->
-            <input type="text" placeholder="Your postcode" style="width: 500px; height: 35px" id="location"
+            <input type="text" placeholder="Your postcode" style="width: 250px; height:35px" id="location"
               name="location" required><br><br>
           </form>
         </div>
 
         <div>
-          <form action="#" method="post">
-            <input type="text" placeholder="Your registration Number" style="width: 500px; height: 35px"
-              id="number-plate" name="number-plate" required><br><br>
-          </form>
+          <select style="width: 250px; height:35px">
+            <option value="">Select manufacture</option>
+            <option value="Mercedez">Mercedez</option>
+            <option value="BMW">BMW</option>
+            <option value="Missan">Nissan</option>
+          </select>
         </div>
 
-        <h6 style="color:white"> <a href="/alternativeSearch.html" target="_blank" title="remember your number">Don't
-            remember
-            registration
-            Number?</a></h6>
+        <div>
+          <select style="width: 250px; height:35px">
+            <option value="">Select year</option>
+            <option value="item1">Mercedez</option>
+            <option value="item2">BMW</option>
+            <option value="item3">Nissan</option>
+          </select>
+        </div>
+
+        <div>
+          <select style="width: 250px; height:35px">
+            <option value="">Select model</option>
+            <option value="item1">Mercedez</option>
+            <option value="item2">BMW</option>
+            <option value="item3">Nissan</option>
+          </select>
+        </div>
+
+        <div>
+          <select style="width: 250px; height:35px">
+            <option value="">Select fuel type</option>
+            <option value="item1">Mercedez</option>
+            <option value="item2">BMW</option>
+            <option value="item3">Nissan</option>
+          </select>
+        </div>
+
+        <div>
+          <select style="width: 250px; height:35px">
+            <option value="">Select engine capacity</option>
+            <option value="item1">Mercedez</option>
+            <option value="item2">BMW</option>
+            <option value="item3">Nissan</option>
+          </select>
+        </div>
+
+
+
+        <h6 style="color:white"> <a href="#" target="_blank" title="remember your number"> Use registration number</a>
+        </h6>
 
         <div class="button">
-          <button type="submit" id="find-service-button">Find Service</button>
+          <button type="submit">Next Step</button>
         </div>
       </div>
-
-
 
       <!--Just to have the background image-->
       <p style="color:black">
@@ -134,6 +169,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!--to get more icons-->
 
 
 
