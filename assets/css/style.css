@@ -750,6 +750,9 @@ section {
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
   transition: all ease-in-out 0.3s;
   /* background: rgb(106, 150, 106); */
   background: url("../img/forestWithClassicCar.jpg");
