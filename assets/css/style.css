@@ -1679,17 +1679,12 @@ Recommended Mehanics
 }
 
 
-
-
-
-
-
-
 /*--------------------------------------------------------------
 # About page
 --------------------------------------------------------------*/
 .about{
-  background: url("../img/green_landing_image.jpg");
+  background: url("../img/greenDrive\ Logo.jpg");
+  background-size: 1000px 800px;
   background-repeat:round;
 }
 /*--------------------------------------------------------------
