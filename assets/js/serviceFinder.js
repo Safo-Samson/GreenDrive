@@ -56,7 +56,7 @@ findServiceButton.addEventListener('click', function (event) {
     }
 
     // Navigate to services page
-    window.location.href = '/recommended-serives.html';
+    window.location.href = '/recommended-services.html';
 });
 
 
@@ -66,3 +66,18 @@ findServiceButton.addEventListener('click', function (event) {
 // window.location.href = "/recommended-services.html";
 // }
 // );
+
+
+/***********************************************
+ * Showing map of recommended services
+ **********************************************/
+
+let mapLink = document.getElementById('map-button');
+let mapContainer = document.getElementById("map-container");
+mapLink.addEventListener("click", function () {
+    if (mapContainer.style.display === "none") {
+        mapContainer.style.display = "block";
+    } else {
+        mapContainer.style.display = "none";
+    }
+});

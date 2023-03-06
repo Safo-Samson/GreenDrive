@@ -11,7 +11,7 @@ body {
 a {
   color: green;;
   /* color: #34b7a7; */
-  text-decoration: none;
+  text-decoration: none
 }
 
 a:hover {
@@ -627,6 +627,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 .fa-arrow-left-long{
   left: 15px;
 }
+
 .fa-arrow-right-long{
   right: 15px;
 }
@@ -1625,10 +1626,18 @@ dropdown in the ourServices Session
 
 .OurServices a{
   color: #000000;
+  
 }
-
+.OurServices a{
+  text-decoration: underline;
+  
+}
 .OurServices a:hover{
   color: green;
+}
+
+.recommendedMechanics{
+  margin: 50px 100px;
 }
 
 /***************************************************
@@ -1639,6 +1648,9 @@ cursor
   cursor: url("/assets/img/circle-cursor.svg") 16 16, auto;
 }
 
+
+
+
 /***************************************************
 Recommended Mehanics 
 ****************************************************/
@@ -1646,6 +1658,32 @@ Recommended Mehanics
 .recommendedMechanics p{
   color: black;
 }
+
+.recommendedMechanics button{
+  color:white;
+  border-radius: 10px;
+  background-color: green;
+}
+
+.recommendedMechanics button:hover{
+  background-color: black;
+  color: green;
+}
+.top-right { /*specifically to make text appear on the top right corner*/
+
+  margin-top: 120px;
+  margin-right: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # About page
