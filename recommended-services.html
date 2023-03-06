@@ -31,6 +31,9 @@
     <!--to get back and forward arrows-->
     <script src="https://kit.fontawesome.com/d11fac47f6.js" crossorigin="anonymous"></script>
     <!-- <link rel="styleshet" href="/awesomeIcons/all.css"> -->
+
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/serviceFinder.js" defer></script>
 </head>
 
 <body>
@@ -69,33 +72,48 @@
     <main id="main">
 
         <section class="recommendedMechanics">
+            <h1 style="text-decoration: underline; margin-bottom: 20px;">Recommended local mechanics: </h1>
+
+            <div class="top-right">
+                <button id="map-button">view map</button>
+            </div>
+
+            <div id="map-container" style="display: none;">
+                <iframe style="border:0; width: 100%; height: 270px;"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4967.925095008878!2d-0.105196071807748!3d51.495554768532664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a23d99f27f%3A0x1a4907e34b872655!2sElephant%20and%20Castle%2C%20London!5e0!3m2!1sen!2suk!4v1676894960431!5m2!1sen!2suk"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="no" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+
             <!-- Mechanic review list -->
-            <ul id="mechanic-list">
+
+            <ul id="mechanic-list" style="list-style-image: url(/assets/img/green\ star.jpg);">
                 <!-- Mechanic 1 -->
                 <li>
                     <h2>Safo's Hybrid Mechanics</h2>
-                    <p>Rating: 4.9 out of 5</p>
+                    <p><b>Rating:</b> 4.9 out of 5</p>
                     <p>Location: 123 Main St.</p>
-                    <p>"Joe is an amazing mechanic. He was able to fix my car quickly and at a reasonable price. I would
+                    <p>"Safo is an amazing mechanic. He was able to fix my car quickly and at a reasonable price. I
+                        would
                         definitely recommend him to anyone."</p>
                 </li>
 
                 <!-- Mechanic 2 -->
                 <li>
                     <h2>Eben's Mechanic legend</h2>
-                    <p>Rating: 4.8 out of 5</p>
+                    <p><b>Rating:</b> 4.8 out of 5</p>
                     <p>Location: 456 Oak St.</p>
-                    <p>"Mike is a great mechanic. He was able to diagnose and fix my car's issues quickly. He's also
+                    <p>"Eben is a great mechanic. He was able to diagnose and fix my car's issues quickly. He's also
                         very friendly and knowledgeable."</p>
                 </li>
 
                 <!-- Mechanic 3 -->
                 <li>
                     <h2>Jojo's EV mechanics</h2>
-                    <p>Rating: 4.7 out of 5</p>
+                    <p><b>Rating:</b> 4.7 out of 5</p>
                     <p>Location: 789 Maple Ave.</p>
-                    <p>"Sara is a fantastic mechanic. She was able to fix my car's issue in no time, and her prices are
-                        very reasonable. I highly recommend her."</p>
+                    <p>"Jojo is a fantastic mechanic. He was able to fix my car's issue in no time, and his prices are
+                        very reasonable. I highly recommend him."</p>
                 </li>
 
                 <!-- Add more mechanics here... -->
@@ -128,12 +146,19 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <cript <!--to get more icons-->
-
-
+    <script>
+        let mapLink = document.getElementById('map-button');
+        let mapContainer = document.getElementById("map-container");
+        mapLink.addEventListener("click", function () {
+            if (mapContainer.style.display === "none") {
+                mapContainer.style.display = "block";
+                mapLink.textContent = "Hide map";
+            } else {
+                mapContainer.style.display = "none";
+                mapLink.textContent = "view map"
+            }
+        });
+    </script>
 
 </body>
 
