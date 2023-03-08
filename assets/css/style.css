@@ -1349,22 +1349,22 @@ Login page
 * {box-sizing: border-box}
 /* Full-width input fields */
   input[type=text], input[type=password] {
-  width: 100%;
+  width: 100%; /* width of that page that shows up when the sign up is clicked*/
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background: #fdfdfd;
 }
 
 /* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
+.signup input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
 
 /* Set a style for all buttons */
-button {
+.signup button {
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -1375,29 +1375,29 @@ button {
   opacity: 0.9;
 }
 
-button:hover {
+.signup button:hover {
   opacity:1;
 }
 
 /* Extra styles for the cancel button */
-.cancelbtn {
+.signup .cancelbtn {
   padding: 14px 20px;
-  background-color: #f44336;
+  background-color: #e51506;
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+.signup .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
 
 /* Add padding to container elements */
-.container {
+.signup .container {
   padding: 16px;
 }
 
 /* The Modal (background) */
-.modal {
+.signup .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -1406,42 +1406,42 @@ button:hover {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
+  background-color: #a4d5d7;
   padding-top: 50px;
 }
 
 /* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
+.signup .modal-content {
+  background-color: #8277c0;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
+  border: 1px solid #08db2f;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* Style the horizontal ruler */
-hr {
-  border: 1px solid #f1f1f1;
+.signup hr {
+  border: 1px solid #b81111;
   margin-bottom: 25px;
 }
 
 /* The Close Button (x) */
-.close {
+.signup .close {
   position: absolute;
   right: 35px;
   top: 15px;
   font-size: 40px;
   font-weight: bold;
-  color: #f1f1f1;
+  color: #ed007e;
 }
 
-.close:hover,
+.signup .close:hover,
 .close:focus {
   color: #f44336;
   cursor: pointer;
 }
 
 /* Clear floats */
-.clearfix::after {
+.signup .clearfix::after {
   content: "";
   clear: both;
   display: table;
@@ -1449,7 +1449,10 @@ hr {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+  .signup .cancelbtn, .signupbtn {
     width: 100%;
   }
 }
+
+
+
