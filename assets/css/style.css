@@ -743,15 +743,15 @@ section {
   }
 }
 
-
-
-
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
   padding: 70px 20px 80px 20px;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
   transition: all ease-in-out 0.3s;
   /* background: rgb(106, 150, 106); */
   background: url("../img/forestWithClassicCar.jpg");
@@ -1272,10 +1272,26 @@ Recommended Mehanics
 # About page
 --------------------------------------------------------------*/
 .about{
-  background: url("../img/greenDrive\ Logo.jpg");
-  background-size: 1000px 800px;
+  background: url("../img/green\ drive-9.svg");
   background-repeat: round;
+  height: 300px;
 }
+
+.abouttxt{
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  padding-left: 80px;
+}
+
+.aboutstory{
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
