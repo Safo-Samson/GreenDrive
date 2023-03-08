@@ -56,7 +56,8 @@ findServiceButton.addEventListener('click', function (event) {
     }
 
     // Navigate to services page
-    window.location.href = '/recommended-services.html';
+    window.location.href = '/repair-conversion.html'
+    // window.location.href = '/recommended-services.html';
 });
 
 
@@ -69,7 +70,7 @@ findServiceButton.addEventListener('click', function (event) {
 
 
 /***********************************************
- * Showing map of recommended services
+ * Showing map of recommended services,, doenst work atm, I use the inline JS script on that page
  **********************************************/
 
 let mapLink = document.getElementById('map-button');

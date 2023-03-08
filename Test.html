@@ -66,6 +66,32 @@
     button {
       animation: blink 0.9s ease-in-out;
     }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .left-footer ul,
+    .middle-footer ul,
+    .right-footer ul {
+      display: block;
+      text-align: center;
+    }
+
+    .left ul li,
+    .middle ul li,
+    .right ul li {
+      display: block;
+      margin: 0 10px;
+    }
   </style>
 </head>
 
@@ -117,6 +143,36 @@
       loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="no" frameborder="0"
       allowfullscreen></iframe>
   </div>
+
+
+  <footer>
+    <div class="left">
+      <ul>
+        <h4>Help and Support</h4>
+        <li>How it works (link to guides page)</li>
+        <li>Contact Us</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+
+
+    <div class="middle">
+      <ul">
+        <h4>Follow Us</h4>
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+        </ul>
+    </div>
+
+    <div class="right">
+      <ul>
+        <h4>Resources</h4>
+        <li>Apply to be a mechanic</li>
+        <li>our Services</li>
+      </ul>
+    </div>
+  </footer>
 
   <script>
     // Get reference to location input and mechanic list
