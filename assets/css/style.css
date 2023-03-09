@@ -1534,3 +1534,81 @@ Login Up
   from {transform: scale(0)}
   to {transform: scale(1)}
 }
+
+
+/*******************************************************
+  Guides page
+********************************************************/
+
+.guides{
+  margin-top: 50px;
+  background-color: #000000e6;
+}
+.guides-video-container {
+  width: 80%;
+  height: 50%;
+  margin: 0 auto; /* to centre it*/
+  margin-bottom: 50px;
+  
+
+}
+
+.guides-video-container video { /* using your own video*/
+  width: 100%; 
+  height: 50%;
+}
+.guides-video-container iframe { /* using an embedded video*/
+  width: 100%;
+}
+
+.guides-grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*3 columns , each takes 1/3 of the space*/
+  padding: 10px;
+  column-gap: 20px;
+  grid-template-rows: 304px; /*304 is precise to ensure the row and images are same*/
+
+  /*
+  setting overflow-x: auto on the grid container to enable horizontal scrolling when the columns exceed the width of the container.
+   Finally, we're setting a max-width of 100% on the container to ensure that it doesn't overflow the page itself.
+  */
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.guides-grid-item{
+  background-color: #000000e6; /*doesnt how because the images covers it*/
+  /* padding: 20px; */
+  border: 3px solid #249f09e6;
+}
+.guides-grid-item img {
+  /* max-width: 100%;
+  height: auto; /*we set the max-width property of the img element to 100% and
+                   the height property to auto to ensure that the image is scaled down 
+                   to fit the column while maintaining its aspect ratio. **/
+
+  height: 300px; /* Set a fixed height for the images */
+  width: auto; /* Set the width to auto to maintain aspect ratio */
+  display: block; /* Add this to remove any whitespace below the image */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* .guides .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.text-overlay { /*doesnt work as intended*/
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: rgb(237, 10, 10);
+  font-size:larger;
+}

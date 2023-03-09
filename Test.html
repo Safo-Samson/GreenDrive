@@ -92,6 +92,36 @@
       display: block;
       margin: 0 10px;
     }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .grid-item {
+      position: relative;
+    }
+
+    .grid-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .text-overlay {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: white;
+      font-size: 1.5rem;
+    }
   </style>
 </head>
 
@@ -144,6 +174,12 @@
       allowfullscreen></iframe>
   </div>
 
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="/assets/img/_mercedes_electric_2024.jpeg" alt="Your Image">
+      <div class="text-overlay">Your text here</div>
+    </div>
+  </div>
 
   <footer>
     <div class="left">
