@@ -27,9 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <!--to get back and forward arrows-->
-  <script src="https://kit.fontawesome.com/d11fac47f6.js" crossorigin="anonymous"></script>
-  <!-- <link rel="styleshet" href="/awesomeIcons/all.css"> -->
+
 
   <!--React CDN -- adds react to the existing html page and allows us to write react code to javaScripts to the existing page-->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -70,61 +68,43 @@
     </div>
   </header><!-- End Header -->
 
-  <body class="guides"> <!--to make the background image appear-->
 
-    <section class="gudies">
-      <h1 style="text-align: center; margin-top: 50px;">How GreenDrive Works</h1>
+  <section class="gudies">
+    <h1 style="text-align: center; margin-top: 50px;">How GreenDrive Works</h1>
 
-      <div class="guides-video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1eyx-DvRHhU" title="YouTube video player"
-          frameborder="0" allowfullscreen></iframe>
+    <div class="guides-video-container">
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1eyx-DvRHhU" title="YouTube video player"
+          frameborder="0" allowfullscreen></iframe> -->
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ekgUjyWe1Yc" title="YouTube video player"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="guides-grid-container">
+
+      <div class="guides-grid-item">
+        <a href="#"><img src="/assets/img/mercedes_electric_2023.jpg"></a>
+        <div class="text-overlay">
+          <h1>EV CONVERSION</h1>
+        </div>
       </div>
 
-      <div class="guides-grid-container">
-        <div class="guides-grid-item">
-          <a href="#"><img src="/assets/img/mercedes_electric_2023.jpg"></a>
-          <div class="text-overlay">Your text here</div>
+      <div class="guides-grid-item">
+        <a href="#"><img src="/assets/img/_mercedes_electric_2024.jpeg"></a>
+        <div class="text-overlay">
+          <h1>CHARGING</h1>
         </div>
-
-        <div class="guides-grid-item">
-          <a href="#"><img src="/assets/img/_mercedes_electric_2024.jpeg"></a>
-          <div class="text-overlay">mama Your text here</div>
-        </div>
-
-        <div class="guides-grid-item">
-          <a href="#"><img src="/assets/img/_mercedes_electric_2024.jpeg"></a>
-          <div class="text-overlay">Your text there</div>
-        </div>
-
       </div>
-    </section>
 
+      <div class="guides-grid-item">
+        <a href="#"><img src="/assets/img/_mercedes_electric_2024.jpeg"></a>
+        <div class="text-overlay">
+          <h1>BATTERY</h1>
+        </div>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-
-  </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+  </section>
 
 
 
@@ -157,11 +137,13 @@
         <li>our Services</li>
       </ul>
     </div>
-    <!-- <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>GreenDrive Hub</span></strong> All Rights Reserved <br>
-      </div>
-    </div> -->
+
+    <!--Our JavaScript-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/logins.js"></script>
+    <script src="assets/js/SlideShow.js"></script>
   </footer><!-- End  Footer -->
 
 </body>
+
+</html>
