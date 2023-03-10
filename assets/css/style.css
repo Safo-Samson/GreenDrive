@@ -1520,6 +1520,7 @@ Login Up
 
 .guides h1,h2,h3,h4,h5{
   color: white;
+  font-weight: bolder;
 }
 .guides-video-container {
   width: 80%;
@@ -1586,7 +1587,8 @@ Login Up
   /* background-color: black; */
 }
 .news h1,h2,h3,h4,h5{
-  color: rgb(6, 121, 16);
+  color: rgb(5, 155, 52);
+  font-weight: bolder;
 }
 
  .news-container{
@@ -1604,8 +1606,11 @@ Login Up
 .news-grid-item{
   background-color: #c10e0ee6; /*doesnt how because the images covers it*/
   border: 3px solid #249f09e6;
-
   position: relative;/* Set the grid item to position:relative to position the overlay */
+
+
+
+  overflow: hidden; /*overflow property to hidden to hide the images that extend beyond the boundaries of the div element.*/
 }
 
 .news-grid-item img {
@@ -1631,10 +1636,9 @@ Login Up
   text-align: center;
 } 
 
-.text-overlay h1,h2,h2,h4,h5,h6 {
-  color: white; /* Set the color of the text */
-  font-size: px; /* Set the font size of the text */
-  font-weight: bold; /* Set the font weight of the text */
+ .text-overlay h1,h2,h2,h4,h5,h6 {
+  color: rgb(6, 109, 25); /* Set the color of the text */
+  font-weight: bolder;
 }
 
 .text-overlay p {
@@ -1646,88 +1650,5 @@ Login Up
 /*********************************************************
   Slide show for news page
 *********************************************************/
+
 /* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}

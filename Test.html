@@ -2,261 +2,149 @@
 <html>
 
 <head>
-  <title>Postcode Finder</title>
-  <style>
-    body {
-      background-color: #f2f2f2;
-    }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 10px 20px 10px 20px;
-      background-color: #986161;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    }
+  <title>Text</title> <!--Changed the title-->
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    form {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon"> <!--Changes made to favicon, from apple-touch to Portfolio favicon-->
 
-    label {
-      font-weight: bold;
-      margin-right: 10px;
-    }
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-    input[type="text"] {
-      padding: 10px;
-      border: none;
-      border-radius: 3px;
-      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-      flex: 1;
-    }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    button[type="submit"] {
-      /*this is callec attribute selector*/
-      padding: 10px 20px 10px 20px;
-      border: none;
-      background-color: #0077cc;
-      color: #fff;
-      border-radius: 3px;
-      cursor: pointer;
-    }
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-    button[type="submit"]:hover {
-      background-color: #00a300;
-    }
-
-    @keyframes blink {
-      0% {
-        background-color: #ff0000;
-      }
-
-      50% {
-        background-color: #00ff00;
-      }
-
-      100% {
-        background-color: #ff0000;
-      }
-    }
-
-    button {
-      animation: blink 0.9s ease-in-out;
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    footer ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .left-footer ul,
-    .middle-footer ul,
-    .right-footer ul {
-      display: block;
-      text-align: center;
-    }
-
-    .left ul li,
-    .middle ul li,
-    .right ul li {
-      display: block;
-      margin: 0 10px;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    .grid-item {
-      position: relative;
-    }
-
-    .grid-item img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .text-overlay {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      color: white;
-      font-size: 1.5rem;
-    }
-  </style>
+  <!--React CDN -- adds react to the existing html page and allows us to write react code to javaScripts to the existing page-->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!--allows us to write JSX syntax and ES6 in older browsers.-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
+<body id="main">
 
 
-<body>
-  <div class="container">
-    <h1>Postcode Finder</h1>
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container" data-aos="fade-up">
 
-    <form action="#" method="post">
-      <label for="postcode">Enter your postcode:</label>
-      <input type="text" id="postcode" name="postcode" required>
-      <button type="submit">Find</button>
-    </form>
+      <div class="section-title">
+        <h2>Testimonials</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+          in iste officiis commodi quidem hic quas.</p>
+      </div>
 
-  </div>
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
 
-  <!--an alternative-->
-  <!-- <div>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-          </form>
-    </div> -->
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" value="Enter your name here">
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" value="Enter your name here"
-    onfocus="if (this.value == 'Enter your name here') { this.value = ''; }"
-    onblur="if (this.value == '') { this.value = 'Enter your name here'; }">
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-  <input type="text" placeholder="Enter your name :">
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor
+                labore quem eram duis noster aute amet eram fore quis sint minim.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
+                dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-  <form>
-    <label for="location">Enter your location:</label>
-    <input type="text" id="location" name="location">
-    <button type="submit" ud="find-service-button">Search</button>
-  </form>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
 
-  <div class="top-right">
-    <button id="map-button">view map</button>
-  </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
 
-  <div id="map-container" style="display: none;">
-    <iframe style="border:0; width: 100%; height: 270px;"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4967.925095008878!2d-0.105196071807748!3d51.495554768532664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a23d99f27f%3A0x1a4907e34b872655!2sElephant%20and%20Castle%2C%20London!5e0!3m2!1sen!2suk!4v1676894960431!5m2!1sen!2suk"
-      loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="no" frameborder="0"
-      allowfullscreen></iframe>
-  </div>
-
-  <div class="grid-container">
-    <div class="grid-item">
-      <img src="/assets/img/_mercedes_electric_2024.jpeg" alt="Your Image">
-      <div class="text-overlay">Your text here</div>
     </div>
-  </div>
+  </section><!-- End Testimonials Section -->
 
-  <footer>
-    <div class="left">
-      <ul>
-        <h4>Help and Support</h4>
-        <li>How it works (link to guides page)</li>
-        <li>Contact Us</li>
-        <li>About Us</li>
-      </ul>
-    </div>
-
-
-    <div class="middle">
-      <ul">
-        <h4>Follow Us</h4>
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
-        </ul>
-    </div>
-
-    <div class="right">
-      <ul>
-        <h4>Resources</h4>
-        <li>Apply to be a mechanic</li>
-        <li>our Services</li>
-      </ul>
-    </div>
-  </footer>
-
-  <script>
-    // Get reference to location input and mechanic list
-    const locationInput = document.getElementById('location');
-    const mechanicList = document.getElementById('mechanic-list');
-
-    // Add event listener to form submit
-    document.querySelector('form').addEventListener('submit', function (event) {
-      // Prevent form submission
-      event.preventDefault();
-
-      // Get user input location
-      const userLocation = locationInput.value;
-
-      // Filter mechanics based on location
-      const filteredMechanics = Array.from(mechanicList.children).filter(function (mechanic) {
-        const mechanicLocation = mechanic.querySelector('p:nth-of-type(3)').textContent;
-        return mechanicLocation.includes(userLocation);
-      });
-
-      // Clear list of mechanics
-      while (mechanicList.firstChild) {
-        mechanicList.removeChild(mechanicList.firstChild);
-      }
-
-      // Display filtered mechanics
-      filteredMechanics.forEach(function (mechanic) {
-        mechanicList.appendChild(mechanic);
-      });
-    });
-
-
-    // let mapLink = document.getElementById('map-button');
-    // let mapContainer = document.getElementById("map-container");
-    // mapLink.addEventListener("click", function () {
-    //   if (mapContainer.style.display === "none") {
-    //     mapContainer.style.display = "block";
-    //   } else {
-    //     mapContainer.style.display = "none";
-    //   }
-    // });
-
-
-  </script>
-
-  <script src="assets/js/serviceFinder.js"></script>
-
-
+  <script src="/assets/js/SlideShow.js"> </script>
 </body>
 
 </html>
+
+<!-- let images = ["/assets/img/mercedes_electric_2023.jpg", "/assets/img/forestWithClassicCar - Copy.jpg"];
+
+let currentIndex = 0;
+
+function slideShow() {
+    document.getElementById("slideshow").style.backgroundImage = "url('" + images[currentIndex] + "')";
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    setTimeout(slideShow, 2000);
+}
+
+slideShow(); -->
