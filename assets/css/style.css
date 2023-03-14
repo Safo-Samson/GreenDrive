@@ -1273,12 +1273,7 @@ Recommended Mehanics
   margin: 8px;
 }
 
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
-}
+
 
 .ABOUTcolumn {
   float: left;
@@ -1302,6 +1297,9 @@ Recommended Mehanics
   display: table;
 }
 
+.Teamtxt {
+  color: black;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
