@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Text</title> <!--Changed the title-->
+  <title>Contact - Kelly Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.png" rel="icon"> <!--Changes made to favicon, from apple-touch to Portfolio favicon-->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -28,309 +29,160 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
-  <!--React CDN -- adds react to the existing html page and allows us to write react code to javaScripts to the existing page-->
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <!--allows us to write JSX syntax and ES6 in older browsers.-->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-  <style>
-    /* Slideshow container */
-    /* .Green-slideshow-container {
-      max-width: 1000px;
-
-      position: relative;
-      margin: auto;
-    } */
-
-    .Green-slideshow-container {
-      width: 500px;
-      /* set a fixed width */
-      height: 300px;
-      /* set a fixed height */
-      overflow: hidden;
-      /* to hide any content that overflows the container */
-      position: relative;
-      /* to position the image inside the container */
-    }
-
-    .Green-slideshow-container img {
-      width: 100%;
-      /* make the image fill the width of the container */
-      height: 100%;
-      /* make the image fill the height of the container */
-      object-fit: cover;
-      /* or object-fit: contain; depending on your preference */
-      position: absolute;
-      /* to position the image inside the container */
-      top: 0;
-      /* to position the image at the top of the container */
-      left: 0;
-      /* to position the image at the left of the container */
-    }
-
-    /* Hide the images by default */
-    .Green-mySlides {
-      display: none;
-    }
-
-    /* Next & previous buttons */
-    .Green-prev,
-    .Green-next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .Green-next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .Green-prev:hover,
-    .Green-next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Caption text */
-    .Green-text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
-
-    /* Number text (1/3 etc) */
-    .Green-numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-
-    /* The dots/bullets/indicators */
-    .Green-dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-
-    .Green-active,
-    .Green-dot:hover {
-      background-color: #201e1e;
-    }
-
-    /* Fading animation */
-    .Green-fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-
-    @keyframes Green-fade {
-      from {
-        opacity: .4
-      }
-
-      to {
-        opacity: 1
-      }
-    }
-  </style>
+  <!-- =======================================================
+  * Template Name: Kelly - v4.9.1
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body id="main">
+<body>
 
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-  <!-- ======= Testimonials Section ======= -->
-  <section>
-    <!-- Slideshow container -->
-    <div class="Green-slideshow-container">
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Kelly</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <!-- Full-width images with number and caption text -->
-      <div class="Green-mySlides Green-fade">
-        <div class="Green-numbertext">1 / 3</div>
-        <img src="assets/img/forestwithCar.jpg" style="width:100%">
-        <div class="Green-prev" onclick="plusSlides(-1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10094;</div>
-        <div class="Green-next" onclick="plusSlides(1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10095;</div>
-        <div class="text">Caption Text</div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
-
-      <div class="Green-mySlides Green-fade">
-        <div class="Green-numbertext">2 / 3</div>
-        <img src="/assets/img/instagram_ev.jpg" style="width:100%">
-        <div class="Green-prev" onclick="plusSlides(-1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10094;</div>
-        <div class="Green-next" onclick="plusSlides(1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10095;</div>
-        <div class="text">Caption Two</div>
-      </div>
-
-
-      <div class="Green-mySlides Green-fade">
-        <div class="Green-numbertext">1 / 3</div>
-        <img src="assets/img/forestWithClassicCar - Copy.jpg" style="width:100%">
-        <div class="Green-prev" onclick="plusSlides(-1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10094;</div>
-        <div class="Green-next" onclick="plusSlides(1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10095;</div>
-        <div class="text">Caption Text</div>
-      </div>
-
-      <div class="Green-mySlides Green-fade">
-        <div class="Green-numbertext">2 / 3</div>
-        <img src="/assets/img/instagram_ev.jpg" style="width:100%">
-        <div class="Green-prev" onclick="plusSlides(-1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10094;</div>
-        <div class="Green-next" onclick="plusSlides(1)" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
-          &#10095;</div>
-        <div class="text">Caption Two</div>
-      </div>
-
 
     </div>
 
-    <br>
+  </header><!-- End Header -->
 
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="Green-dot" onclick="currentSlide(1)"></span>
-      <span class="Green-dot" onclick="currentSlide(2)"></span>
-      <span class="Green-dot" onclick="currentSlide(3)"></span>
-      <span class="Green-dot" onclick="currentSlide(4)"></span>
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+            in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+
+              </div>
+
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+
+              <div class="text-center"><button type="submit">Send Message</button></div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Kelly</span></strong>. All Rights Reserved
+      </div>
+
     </div>
-    <br>
+  </footer><!-- End  Footer -->
 
-  </section><!-- End Testimonials Section -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-  <script>
-    let slideIndex = 1;
-    let timer;
-    let slides = document.getElementsByClassName("Green-mySlides");
-    let dots = document.getElementsByClassName("Green-dot");
-    let prev = document.querySelector(".Green-prev");
-    let next = document.querySelector(".Green-next");
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    // Start slideshow
-    showSlides(slideIndex);
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-    // On mouseover, pause slideshow
-    prev.addEventListener("mouseover", pauseSlides);
-    next.addEventListener("mouseover", pauseSlides);
-
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("mouseover", pauseSlides);
-      slides[i].removeEventListener("mouseover", pauseSlideshow);
-      slides[i].removeEventListener("mouseout", resumeSlideshow);
-    }
-
-    // On mouseout, restart slideshow
-    prev.addEventListener("mouseout", startSlides);
-    next.addEventListener("mouseout", startSlides);
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("mouseout", startSlides);
-      slides[slideIndex - 1].addEventListener("mouseover", pauseSlideshow);
-      slides[slideIndex - 1].addEventListener("mouseout", resumeSlideshow);
-      setTimeout(showSlides, 2000);
-    }
-
-    // Next/previous controls
-    prev.addEventListener("click", () => plusSlides(-1));
-    next.addEventListener("click", () => plusSlides(1));
-
-    function plusSlides(n) {
-      pauseSlides();
-      showSlides((slideIndex += n));
-    }
-
-    function currentSlide(n) {
-      pauseSlides();
-      showSlides((slideIndex = n));
-    }
-
-    function showSlides(n) {
-      // Reset timer
-      clearTimeout(timer);
-
-      // Ensure slideIndex is within range
-      if (n > slides.length) {
-        slideIndex = 1;
-      } else if (n < 1) {
-        slideIndex = slides.length;
-      }
-
-      // Hide all slides and remove active class from dots
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("Green-active");
-      }
-
-      // Show current slide and set active class on corresponding dot
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].classList.add("Green-active");
-
-      // Start timer for next slide
-      timer = setTimeout(() => {
-        plusSlides(1);
-      }, 2000);
-    }
-
-    function pauseSlides() {
-      clearTimeout(timer);
-    }
-
-    function startSlides() {
-      timer = setTimeout(() => {
-        plusSlides(1);
-      }, 2000);
-    }
-
-    function resumeSlideshow() {
-      slideTimeout = setTimeout(function () {
-        plusSlides(1);
-      }, 2000);
-    }
-
-  </script>
 </body>
 
 </html>
-
-<!-- let images = ["/assets/img/mercedes_electric_2023.jpg", "/assets/img/forestWithClassicCar - Copy.jpg"];
-
-let currentIndex = 0;
-
-function slideShow() {
-    document.getElementById("slideshow").style.backgroundImage = "url('" + images[currentIndex] + "')";
-    currentIndex++;
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-    setTimeout(slideShow, 2000);
-}
-
-slideShow(); -->

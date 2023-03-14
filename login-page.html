@@ -50,7 +50,7 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a class="active" href="service-provider.html">Service Providers</a></li>
+                    <li><a href="service-provider.html">Service Providers</a></li>
                     <li><a href="/community.html">Community</a></li>
                     <li><a href="/news.html">News</a></li>
                     <li><a href="/guides.html">Guides</a></li>
@@ -71,39 +71,39 @@
 
     <main id="main">
 
-        <section class=" gudies">
-            <h2 style="text-align: center;">What does your "name of Car" need?</h2>
-            <div class="guides-grid-container">
+        <div class="login" style="margin-top: 120px;">
 
-                <div class="guides-grid-item">
-                    <a href="/recommended-services.html" class="restricted-link"><img
-                            src="/assets/img/mercedes_electric_2023.jpg">
-                        <div class="text-overlay">
-                            <h1 style="color:white">EV CONVERSION</h1>
-                        </div>
-                    </a>
+            <form class="modal-content animate" action="/recommended-services.html"> <!--action="/action_page.php" -->
+                <!-- <div class="imgcontainer"> use this if you want an image infront of the logins
+                    <img src="/assets/img/HackerBackground.jpg" alt="Avatar" class="avatar">
+                </div> -->
+
+                <div class="container">
+                    <button type="submit">continue with google</button>
+                    <button type="submit">continue with apple</button>
+                    <label for="uname" style="color:black"><b>Username</b></label>
+                    <input style="border: 2px solid black;" type="text" placeholder="Enter Username or email"
+                        name="uname" required>
+
+                    <label for="psw" style="color:black"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" class="loginbtn">Login</button>
+
+                    <label style="color:black">
+                        <input type="checkbox" checked="checked" name="remember"> <b>Remember me</b>
+                    </label>
                 </div>
 
-                <div class="guides-grid-item">
-                    <a href="/recommended-services.html" class="restricted-link"><img
-                            src="/assets/img/repair image.jpeg">
-                        <div class="text-overlay">
-                            <h1 style="color:white">REPAIRS</h1>
-                        </div>
-                    </a>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <p style="text-align: center;"><a href="/signup-page.html">Don't have an account?</a></p>
+                    <p class="psw" style="text-align: center;"><a href="#">Forgot password?</a></p>
                 </div>
-
-                <div class="guides-grid-item">
-                    <a href="recommended-services.html" class="restricted-link"><img
-                            src="/assets/img/_mercedes_electric_2024.jpeg">
-                        <div class="text-overlay">
-                            <h1 style="color:white">OTHERS</h1>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </section>
+            </form>
+        </div>
+        </div>
 
         <div class="slogan">
             <h1 style="font-weight: bolder; color: white">Drive Into The Future...</h1>
@@ -166,3 +166,15 @@
 </body>
 
 </html>
+
+
+
+<!--In HTML, the action attribute in a <form> tag specifies the URL of the script or program that will process the form data when it is submitted.
+
+When a user fills out a form and clicks the submit button, the browser sends the form data to the URL specified in the action attribute. 
+The program at that URL then processes the data and returns a response, which the browser may display to the user or use to redirect to a new page.
+
+For example, if you have a form that allows users to submit their contact information, you might specify the URL of a script that stores the information
+ in a database or sends an email to the site owner.
+
+The action attribute is a required attribute in a <form> tag, and it should always be set to a valid URL that can handle the submitted data.-->

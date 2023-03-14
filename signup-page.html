@@ -50,7 +50,7 @@
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a class="active" href="service-provider.html">Service Providers</a></li>
+                    <li><a href="service-provider.html">Service Providers</a></li>
                     <li><a href="/community.html">Community</a></li>
                     <li><a href="/news.html">News</a></li>
                     <li><a href="/guides.html">Guides</a></li>
@@ -71,39 +71,36 @@
 
     <main id="main">
 
-        <section class=" gudies">
-            <h2 style="text-align: center;">What does your "name of Car" need?</h2>
-            <div class="guides-grid-container">
+        <div class="signup" style="margin-top: 120px">
 
-                <div class="guides-grid-item">
-                    <a href="/recommended-services.html" class="restricted-link"><img
-                            src="/assets/img/mercedes_electric_2023.jpg">
-                        <div class="text-overlay">
-                            <h1 style="color:white">EV CONVERSION</h1>
-                        </div>
-                    </a>
+            <form class="modal-content animate" action="/recommended-services.html">
+                <!--need to implement action page-->
+                <div class="container">
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signup">Sign Up</button>
+                        <p style="text-align: center;"><a href="/login-page.html">Already have an account?</a></p>
+                    </div>
                 </div>
+            </form>
 
-                <div class="guides-grid-item">
-                    <a href="/recommended-services.html" class="restricted-link"><img
-                            src="/assets/img/repair image.jpeg">
-                        <div class="text-overlay">
-                            <h1 style="color:white">REPAIRS</h1>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="guides-grid-item">
-                    <a href="recommended-services.html" class="restricted-link"><img
-                            src="/assets/img/_mercedes_electric_2024.jpeg">
-                        <div class="text-overlay">
-                            <h1 style="color:white">OTHERS</h1>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </section>
+        </div>
 
         <div class="slogan">
             <h1 style="font-weight: bolder; color: white">Drive Into The Future...</h1>

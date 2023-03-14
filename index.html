@@ -81,12 +81,15 @@
   </header><!-- End Header -->
 
   <!-- =========== sign up page============-->
-
   <!-- The Modal (contains the Sign Up form) -->
   <div class="signup">
 
+
+    <!--Remember that, after users login or signup, the login and sign up button on the page should change to the socials-->
+
     <div id="id01" class="modal">
-      <form class="modal-content animate" action="/action_page.php"> <!--need to implement action page-->
+      <form class="modal-content animate" action="/index.html">
+        <!--need to implement action page action=/action_page.php-->
         <div class="container">
           <label for="email"><b>Email</b></label>
           <input type="text" placeholder="Enter Email" name="email" required>
@@ -124,7 +127,7 @@
     <!-- The Modal -->
     <div id="id02" class="modal">
       <!-- Modal Content -->
-      <form class="modal-content animate" action="/action_page.php">
+      <form class="modal-content animate" action="/index.html">
         <!-- <div class="imgcontainer"> use this if you want an image infront of the logins
           <img src="/assets/img/testimonials/testimonials-3.jpg" alt="Avatar" class="avatar">
         </div> -->
@@ -133,7 +136,8 @@
           <button type="submit">continue with google</button>
           <button type="submit">continue with apple</button>
           <label for="uname" style="color:black"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username or email" name="uname" required>
+          <input style="border: 2px solid black" type="text" placeholder="Enter Username or email" name="uname"
+            required>
 
           <label for="psw" style="color:black"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
@@ -148,7 +152,7 @@
         <div class="container" style="background-color:#f1f1f1">
           <button type="button" onclick="document.getElementById('id02').style.display='none'"
             class="cancelbtn">Cancel</button>
-          <p style="text-align: center;"><a href="#">Don't have an account?</a></p>
+          <p style="text-align: center;"><a href="/signup-page.html">Don't have an account?</a></p>
           <p class="psw" style="text-align: center;"><a href="#">Forgot password?</a></p>
         </div>
       </form>

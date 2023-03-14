@@ -864,7 +864,7 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact{
-  background: url("../img/green_landing_image.jpg");
+  background: white;
   background-repeat:round;
 }
 .contact .info {
@@ -918,7 +918,8 @@ section {
 
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
+  background: #ab1717;
 }
 
 .contact .php-email-form .form-group {
