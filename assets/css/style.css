@@ -1255,7 +1255,7 @@ Recommended Mehanics
 
 .about{
   float: left;
-  width: 50%;
+  width: 50%; /* split logo from our story but csnt get the our team sec to seperate yet */
   padding: 15px;
   background: url("../img/green\ drive-9.svg");
   background-repeat: round;
@@ -1277,10 +1277,9 @@ Recommended Mehanics
   padding-left: 80px;
 }
 
-
 .ABOUTcolumn {
   float: left;
-  width: 33.3%;
+  width: 33.3%;  
   margin-bottom: 16px;
   padding: 0 8px;
 }
@@ -1292,12 +1291,6 @@ Recommended Mehanics
 
 .ABOUTcontainer {
   padding: 0 16px;
-}
-
-.ABOUTcontainer::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 .Teamtxt {
