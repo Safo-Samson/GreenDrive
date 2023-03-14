@@ -873,6 +873,11 @@ section {
   background: green;
 }
 
+.contact-section-title {
+  color: #fefefe;
+  text-align: center;
+}
+
 .contact .info i {
   font-size: 20px;
   color: #34b7a7;
