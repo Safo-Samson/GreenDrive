@@ -37,7 +37,30 @@
   <!--allows us to write JSX syntax and ES6 in older browsers.-->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-
+<style>
+    .cursor{
+      position : fixed;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      mix-blend-mode: exclusion;
+      transition: 0.1s;
+    }
+    h1:hover ~ cursor{
+      transform: scale(4);
+    }
+   
+</style>
+<script>
+    const cursor= document.querySelector(".cursor");
+    document.addEventListener("mousemove", (e)=> {
+       cursor.style.left = e.pageX + 'px' ;
+       cursor.style.top = e.pageY + 'px' ;
+    })
+</script> 
   <!-- Load our React components. -->
   <script src="like_button.js"></script>
 </head>
