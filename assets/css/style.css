@@ -563,7 +563,8 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
     /* TODO: I NEED TO PUSH THIS CODE TO GIHUB */
  /* TODO This means that when the page is splitted, the background should change to this color */
 
-    background: rgba(1, 41, 52, 0.8);
+    /* background: rgba(1, 41, 52, 0.8); */
+
     position: absolute;
     bottom: 0;
     top: 0;
@@ -1252,6 +1253,7 @@ Recommended Mehanics
   padding-right: 30px;
   padding-bottom: 5px;
   padding-left: 80px;
+  margin-top: 100px;;
 }
 
 .about{
@@ -1818,6 +1820,7 @@ Style for slogan
   font-weight: bolder;
   font-size: xx-large;
   width: 80%;
+  border-radius: 15px;
   
   text-align: center;
 }
