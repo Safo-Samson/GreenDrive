@@ -57,16 +57,9 @@ findServiceButton.addEventListener('click', function (event) {
 
     // Navigate to services page
     window.location.href = '/repair-conversion.html'
-    // window.location.href = '/recommended-services.html';
+        ;
 });
 
-
-// // Add event listener to form submit
-// document.querySelector('.ServiceContainer form').addEventListener('submit', function (event) {
-
-// window.location.href = "/recommended-services.html";
-// }
-// );
 
 
 /***********************************************
