@@ -37,9 +37,9 @@
   <!--allows us to write JSX syntax and ES6 in older browsers.-->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-<style>
-    .cursor{
-      position : fixed;
+  <style>
+    .cursor {
+      position: fixed;
       width: 20px;
       height: 20px;
       background: #fff;
@@ -49,18 +49,18 @@
       mix-blend-mode: exclusion;
       transition: 0.1s;
     }
-    h1:hover ~ cursor{
+
+    h1:hover~cursor {
       transform: scale(4);
     }
-   
-</style>
-<script>
-    const cursor= document.querySelector(".cursor");
-    document.addEventListener("mousemove", (e)=> {
-       cursor.style.left = e.pageX + 'px' ;
-       cursor.style.top = e.pageY + 'px' ;
+  </style>
+  <script>
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
     })
-</script> 
+  </script>
   <!-- Load our React components. -->
   <script src="like_button.js"></script>
 </head>
@@ -227,20 +227,14 @@
 
     <h1>Our Aim</h1>
 
-    <p style="color:black">The aim of an electric vehicle company is to promote sustainable transportation by providing
-      high-quality electric vehicles
-      that are environmentally friendly and energy efficient. By reducing or eliminating the reliance on fossil fuels,
-      electric vehicles
-      help to reduce greenhouse gas emissions and air pollution, while also minimizing the depletion of non-renewable
-      resources.<br><br>
+    <h2 style="color:rgb(55, 54, 54)">
+      We're dedicated to helping you convert your vehicle to hybrid
+      electric! We
+      understand that there is a growing demand for eco-friendly vehicles, and we are here to assist you in making the
+      switch. <br>Our team of experts has years of experience in the automotive industry and can guide you through the
+      process of converting your vehicle to a hybrid electric one
+    </h2>
 
-      In addition to their environmental benefits, electric vehicles also offer a smooth and quiet driving experience,
-      lower operating costs, and require less maintenance compared to traditional gas-powered vehicles. <br><br>
-
-      Ultimately,
-      the goal of an electric vehicle company is to accelerate the transition to a more sustainable and cleaner
-      transportation system,
-      while also providing drivers with a reliable, safe, and enjoyable driving experience.</p>
   </section>
 
 
@@ -254,21 +248,13 @@
         <img src="assets/img/tracking_cost_pic.png" class="img-fluid">
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 content">
-        <p style="color:black">GreenDrive allows users to track their progress and cost throughtout the process keeping
+        <h2 style="color:rgb(55, 54, 54)">GreenDrive allows users to track their progress and cost throughtout the
+          process keeping
           you updated from start to finish <br>
           You'll recieve updates from the garage.<br>
-          Nunc ullamcorper, dui ut elementum commodo, libero risus congue libero,
-          at maximus nulla augue in quam. Vivamus semper, enim vel bibendum lacinia, ex nisi interdum enim, quis gravida
-          dolor arcu non augue.<br>
-          Vestibulum lacinia, mauris vel eleifend sagittis, arcu leo varius enim, non tristique felis nisi non velit. Ut
-          nec aliquam purus,
-          vel pellentesque augue. Nullam ultricies, magna id commodo suscipit, mauris dui malesuada lectus, sit amet
-          efficitur velit tellus vel justo.<br>
-          Donec pellentesque augue nec nisl faucibus, eget viverra metus ultricies. Nunc vel ex ligula. Sed pulvinar
-          hendrerit justo vel cursus.
-          Sed malesuada tortor eu nulla vestibulum interdum.<br>
-          Maecenas tincidunt velit eu orci convallis, a luctus nulla hendrerit. Donec vel orci vitae augue consectetur
-          commodo.</p>
+          We provide you with a progress bar that shows how much money they have spent in each process, making
+          it easy to see how much money they have left to spend in each category.
+        </h2>
       </div>
     </div>
 
@@ -281,21 +267,14 @@
 
     <div class="row" style="padding: 0% 4% 0% 4%">
       <div class="col-lg-8 pt-4 pt-lg-0 content">
-        <p style="color:black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum mi ac neque
-          bibendum, ut vestibulum elit tempor. <br>
-          Nullam vel risus sit amet dolor luctus viverra in ut sapien.<br>
-          Nunc ullamcorper, dui ut elementum commodo, libero risus congue libero,
-          at maximus nulla augue in quam. Vivamus semper, enim vel bibendum lacinia, ex nisi interdum enim, quis gravida
-          dolor arcu non augue.<br>
-          Vestibulum lacinia, mauris vel eleifend sagittis, arcu leo varius enim, non tristique felis nisi non velit. Ut
-          nec aliquam purus,
-          vel pellentesque augue. Nullam ultricies, magna id commodo suscipit, mauris dui malesuada lectus, sit amet
-          efficitur velit tellus vel justo.<br>
-          Donec pellentesque augue nec nisl faucibus, eget viverra metus ultricies. Nunc vel ex ligula. Sed pulvinar
-          hendrerit justo vel cursus.
-          Sed malesuada tortor eu nulla vestibulum interdum.<br>
-          Maecenas tincidunt velit eu orci convallis, a luctus nulla hendrerit. Donec vel orci vitae augue consectetur
-          commodo.</p>
+        <h2 style="color:rgb(55, 54, 54);"> The website also provides users with information about the
+          services
+          offered by each
+          mechanic and electrician, as well as customer reviews and ratings. <br><br>GreenDrive's goal is to help users
+          find
+          reliable and
+          trustworthy mechanics who can provide high-quality service at a fair price.
+        </h2>
 
       </div>
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
