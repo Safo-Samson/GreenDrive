@@ -70,10 +70,11 @@
 
 
   <section class="news">
-    <h1 style="text-align: center; margin-top: 50px;">Latest Trends</h1>
+    <h1 style="text-align: center; margin-top: 50px;">Latest Trends...</h1>
+    <h1 class="green-slide-across" style="background-color: rgba(0, 0, 0, 0.044); color:black">
+      Get all the news in the world of vehicles</h1>
 
-    <div class="news-container">
-
+    <div class="news-container" style="margin-top: 70px;">
       <div class="news-grid-item">
         <a href="#"><img src="/assets/img/forestWithClassicCar - Copy.jpg"></a>
         <div class="text-overlay">
@@ -184,9 +185,12 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/logins.js"></script>
     <script src="assets/js/SlideShow.js"></script>
-
-
-
+    <script>
+      //  to hide the horizontal bar that comes with the sliding
+      window.onload = function () {
+        document.body.style.overflowX = 'hidden';
+      }
+    </script>
   </footer><!-- End  Footer -->
 </body>
 

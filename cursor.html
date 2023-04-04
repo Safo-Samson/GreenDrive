@@ -43,114 +43,14 @@
     h1:hover~.cursor {
       transform: scale(4);
     }
-
-    .fade-up {
-      opacity: 0;
-      animation: fade-up 1s ease-out forwards;
-    }
-
-    @keyframes fade-up {
-      0% {
-        opacity: 0;
-        transform: translateY(50%);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animated-text {
-      position: relative;
-      animation: slide-in 1s ease-out forwards;
-      animation-delay: 1s;
-      /* add delay equal to fade-up animation duration */
-    }
-
-    @keyframes slide-in {
-      0% {
-        opacity: 0;
-        transform: translateX(-100%);
-      }
-
-      50% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .animated-text::before,
-    .animated-text::after {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 100%;
-      top: 0;
-      z-index: -1;
-    }
-
-    .animated-text::before {
-      left: 0;
-      background-color: rgba(228, 22, 22, 0.948);
-      animation: reveal-left 5s ease-out forwards;
-    }
-
-    .animated-text::after {
-      right: 0;
-      background-color: rgba(13, 196, 16, 0.877);
-      animation: reveal-right 5s ease-out forwards;
-    }
-
-    @keyframes reveal-left {
-      0% {
-        transform: scaleX(0);
-      }
-
-      100% {
-        transform: scaleX(1);
-      }
-    }
-
-    @keyframes reveal-right {
-      0% {
-        transform: scaleX(0);
-      }
-
-      100% {
-        transform: scaleX(1);
-      }
-    }
-
-
-
-    .slide {
-      position: absolute;
-      white-space: nowrap;
-      animation: slide 10s linear infinite;
-    }
-
-    @keyframes slide {
-      0% {
-        left: -100%;
-      }
-
-      100% {
-        left: 100%;
-      }
-    }
   </style>
 </head>
 
 <body>
-  <h1 class="animated-text fade-up">Green Drive Should work with this</h1> <br>
+
+
+  <h1>Green Drive Should work with this</h1> <br>
   <br><br>
-  <h1 class="slide">Hello, world!</h1>
 
   <div class="cursor"></div>
 
