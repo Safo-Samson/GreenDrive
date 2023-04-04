@@ -1108,7 +1108,8 @@ Our services
 ****************************************************/
 
 .OurServices{
-  background: url("/assets/img/forestWithClassicCar.jpg"); 
+  background: url("/assets/img/forestWithClassicCar\ -\ Copy2.jpg"); 
+  background-position: center;
   padding: 2% 4% 2% 4%;
 }
 
@@ -1127,7 +1128,8 @@ Our services
     margin-top: 40px;  not needed again because of the translate*/
     /* margin-left: 420; making the container appear on top left  same reason as above*/
     padding:  20px 30px 20px 30px;
-    background-color: #4cdd585f;
+    background-color: #4cdd5841;
+    /*background-color: #3793de;*/
     border-radius: 10px; /*to make the corners of the forms rounded*/
 
     position: absolute;
