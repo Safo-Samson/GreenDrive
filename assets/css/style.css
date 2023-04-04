@@ -1,11 +1,11 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  /* color: #444444; */
   color: #e8e2e2;  /*changing the font color to light white*/
  /*setting my own background color*/
  background-color: white;
- /* background: url("/assets/img/backgroundTest.jpg"); */
+ background-color: rgba(11, 233, 41, 0.211);
+
 }
 
 a {
@@ -723,11 +723,16 @@ section {
   width: 100%;
   overflow: hidden;
   transition: all ease-in-out 0.3s;
-  /* background: rgb(106, 150, 106); */
   background: url("../img/forestWithClassicCar.jpg");
   background: rgb(166, 164, 161);
+  filter: brightness(0.3);
 
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+
+  box-shadow: 0px 0 35px 0 rgba(54, 51, 51, 0);
+}
+
+.icon-box:hover  {
+  filter: brightness(1); /* Set the brightness of the image on hover */
 }
 
 
@@ -1028,7 +1033,7 @@ section {
 cost-tracking section in main page
  -------------------------------------------------------------*/
  #cost{
-
+  padding: 2% 4%;
  }
 
  #cost h1{
@@ -1044,7 +1049,7 @@ cost-tracking section in main page
 Professionals section in main page
  -------------------------------------------------------------*/
 #Professionals{
-
+  padding: 2% 4%;
 }
 
 #Professionals h1{
@@ -1092,7 +1097,7 @@ Professionals section in main page
 }
 
 #aim {
-padding: 2% 4% 2% 4%; /* for the paragraphs on the homepage after herowhat*/  
+padding: 2% 4%; /* for the paragraphs on the homepage after herowhat*/  
 }
 
 #aim h1{
@@ -1211,10 +1216,22 @@ dropdown in the ourServices Session
 cursor 
 ****************************************************/
 
-.hollow-circle {
-  cursor: url("/assets/img/circle-cursor.svg") 16 16, auto;
+.cursor{
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background: #177005af;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  transform: translate(-50%, -50%); 
+  pointer-events: none;
+  mix-blend-mode: exclusion; 
+  transition: 0.1s;
 }
 
+h1:hover ~ .cursor {
+  transform: scale(4);
+}
 
 
 
@@ -1640,11 +1657,11 @@ Login Up
   column-gap: 50px;
   row-gap: 50px;
   grid-auto-rows: minmax(100px, auto); /* Set the minimum height for each row and allow them to grow as needed */
-  background-color: #ffffff;
+  background-color:  rgba(11, 233, 41, 0);;
 }
 
 .news-grid-item{
-  background-color: #c10e0ee6; /*doesnt how because the images covers it*/
+  background-color: #0e0b0be6; /*doesnt how because the images covers it*/
   border: 3px solid #249f09e6;
   position: relative;/* Set the grid item to position:relative to position the overlay */
   overflow: hidden; /*overflow property to hidden to hide the images that extend beyond the boundaries of the div element.*/
@@ -1825,4 +1842,90 @@ Style for slogan
   border-radius: 15px;
   
   text-align: center;
+}
+
+/*******************************************************
+    Green Animated Text
+********************************************************/
+
+.green-animated-text {
+  position: relative;
+  animation: slide-in 5s ease-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.green-animated-text::before,
+.green-animated-text::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+.green-animated-text::before {
+  left: 0;
+  background-color: rgba(11, 233, 41, 0.274);
+  animation: reveal-left 15s ease-out forwards;
+}
+
+.green-animated-text::after {
+  right: 0;
+  background-color: rgba(11, 233, 41, 0.274);
+  animation: reveal-right 15s ease-out forwards;
+}
+
+@keyframes reveal-left {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes reveal-right {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+/**************************************
+sliding across
+**************************************/
+.green-slide-across {
+  position: absolute;
+  white-space: nowrap;
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
