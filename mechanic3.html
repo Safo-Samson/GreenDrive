@@ -34,6 +34,7 @@
 
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/serviceFinder.js" defer></script>
+    <script src="assets/js/misc.js" defer></script>
 </head>
 
 <body>
@@ -71,60 +72,107 @@
 
     <main id="main">
 
-        <section class="recommendedMechanics">
-            <h1 style="color: black; margin-bottom: 20px;">Your Local mechanics: </h1>
+        <section id="Professionals" data-aos="fade-up" data-aos-delay="slideshow">
+            <h2 class="green-animated-text" style="margin-top: 30px; margin-left: 48px;">
+                Jojo's EV mechanics
+            </h2><br>
 
-            <div class="top-right">
-                <button id="map-button">view map</button>
+            <div class=" row" style="padding: 0% 4% 0% 4%">
+                <div class="col-lg-8 pt-4 pt-lg-0 content">
+                    <h4 style="color:rgb(55, 54, 54);">Joseph is a seasoned mechanic with over 11 years of experience in
+                        the automotive industry. <br> He takes pride in providing exceptional service to his clients,
+                        and his
+                        interest in the field has led him to constantly seek knowledge and skills to keep up with the
+                        latest trends and technologies.
+                    </h4>
+                    <!-- Reviews-->
+                    <h3 class="green-collapsible"> Reviews</h3>
+                    <div class="green-collapsible-content">
+                        <p style="color: black"> <b> John Doe | April 1, 2022 | Rating: 5/5 </b><br>
+                            "Amazing mechanic! Fixed my car quickly and at a reasonable price. Highly recommended."
+                        </p>
+                        <br>
+
+                        <p style="color: black"> <b>Sarah Smith | May 15, 2022 | Rating: 4/5</b> <br>
+                            "Great service, although a little slow. But overall satisfied with the work done."
+                        </p>
+                        <br>
+
+                        <p style="color: black"><b>Michael Johnson | July 3, 2022 | Rating: 3/5 </b> <br>
+                            "Decent mechanic, but didn't fix the issue completely. Had to come back twice to get it
+                            resolved."
+                        </p>
+                        <br>
+
+                        <p style="color: black"><b>Emily Wong |August 22, 2022 | Rating: 4/5</b> <br>
+                            "Good communication throughout the repair process. Would have given 5 stars if the repair
+                            was a bit faster."
+                        </p>
+                        <br>
+
+                        <p style="color: black"><b>James Kim | October 5, 2022 | Rating: 5/5</b> <br>
+                            "Fantastic work! Fixed my car in no time and even gave me some tips on how to keep it in
+                            good condition."
+                        </p>
+                        <br>
+
+                        <p style="color: black"><b> Maria Rodriguez | November 17, 2022 | Rating: 2/5</b> <br>
+                            "Disappointed with the service. Took too long and the repair wasn't done properly. Will not
+                            be returning."
+                        </p>
+                        <br>
+                    </div>
+
+                    <!--Location-->
+                    <h3 class="green-collapsible">Location</h3>
+                    <div class="green-collapsible-content">
+                        <p style="color: black"><b>Address: </b>89 Maple Ave. <br> <b>Postcode:</b> SE1 7RN</p>
+                        <div>
+                            <button id="map-button"
+                                style="background-color: rgba(0, 0, 0, 0.252); border-radius: 30%;">hide map</button>
+                        </div>
+
+                        <div id="map-container">
+                            <iframe style="border:0; width: 100%; height: 270px;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4967.925095008878!2d-0.105196071807748!3d51.495554768532664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a23d99f27f%3A0x1a4907e34b872655!2sElephant%20and%20Castle%2C%20London!5e0!3m2!1sen!2suk!4v1676894960431!5m2!1sen!2suk"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="no"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                    <!--Qualification-->
+                    <h3 class="green-collapsible">Qualifications</h3>
+                    <div class="green-collapsible-content">
+                        <div class=" qualification-container">
+                            <ul style="list-style-image: url(/assets/img/green\ star.jpg);">
+                                <li>
+                                    phD. Mechanical Engineering. MIT.
+                                </li>
+                                <li>
+                                    Bsc. Mechanical Engineering, Stamford Univercity
+                                </li>
+                                <li>
+                                    12 years of proferssional experience
+                                </li>
+                                <li>
+                                    Active since July,2023.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            <div id="map-container" style="display: none;">
-                <iframe style="border:0; width: 100%; height: 270px;"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4967.925095008878!2d-0.105196071807748!3d51.495554768532664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604a23d99f27f%3A0x1a4907e34b872655!2sElephant%20and%20Castle%2C%20London!5e0!3m2!1sen!2suk!4v1676894960431!5m2!1sen!2suk"
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade" scrolling="no" frameborder="0"
-                    allowfullscreen></iframe>
+            <!--Profile picture-->
+            <div class="green-booking-container">
+                <img src="/assets/img/ourteam3.jpg" alt="Image description">
+                <button class="green-blink">Book Jojo</button>
             </div>
 
-            <!-- Mechanic review list -->
-
-            <ul id="mechanic-list" style="list-style-image: url(/assets/img/green\ star.jpg);">
-                <!-- Mechanic 1 -->
-                <li>
-                    <a href="mechanic1.html">
-                        <h2>Safo's Hybrid Mechanics</h2>
-                    </a>
-                    <p><b>Rating:</b> 4.9 out of 5</p>
-                    <p>Location: 123 Main St.</p>
-                    <p>"Safo is an amazing mechanic. He was able to fix my car quickly and at a reasonable price. I
-                        would definitely recommend him to anyone."</p>
-                </li>
-
-                <!-- Mechanic 2 -->
-                <li>
-                    <a href="mechanic2.html">
-                        <h2>Eben's Mechanic legend</h2>
-                    </a>
-                    <p><b>Rating:</b> 4.8 out of 5</p>
-                    <p>Location: 456 Oak St.</p>
-                    <p>"Eben is a great mechanic. He was able to diagnose and fix my car's issues quickly. He's also
-                        very friendly and knowledgeable."</p>
-                </li>
-
-                <!-- Mechanic 3 -->
-                <li>
-                    <a href="mechanic3.html">
-                        <h2>Jojo's EV mechanics</h2>
-                    </a>
-                    <p><b>Rating:</b> 4.7 out of 5</p>
-                    <p>Location: 789 Maple Ave.</p>
-                    <p>"Jojo is a fantastic mechanic. He was able to fix my car's issue in no time, and his prices are
-                        very reasonable. I highly recommend him."</p>
-                </li>
-
-
-                <!-- Add more mechanics here... -->
-            </ul>
         </section>
+
+
 
         <div class="slogan">
             <h1 style="font-weight: bolder; color: white">Drive Into The Future...</h1>
@@ -139,14 +187,13 @@
 
         <div class="left-footer">
             <ul>
-              <h4>Help and Support</h4>
-              <li><a href="guides.html">How it works</a></li>
-              <!-- <li> (link to guides page)</li> -->
-              <li><a href="contact.html">Contact Us</a></li>
-              <!-- <li>Contact Us</li> -->
-              <li><a href="about.html">About Us</a></li>
+                <h4>Help and Support</h4>
+                <li>How it works (link to guides page)</li>
+                <li>Contact Us</li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
-          </div>
+        </div>
+
 
         <div class="middle-footer header-social-links">
             <ul>
@@ -184,6 +231,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+
     <script>
         let mapLink = document.getElementById('map-button');
         let mapContainer = document.getElementById("map-container");

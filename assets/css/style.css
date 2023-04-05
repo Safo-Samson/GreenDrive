@@ -1964,6 +1964,10 @@ container for booking
 ***********************************/
 
 .green-booking-container {
+  width: 380px;  /* set a fixed width */
+  height: 350px;   /* set a fixed height */
+  overflow: hidden;    /* to hide any content that overflows the container */
+
   position: fixed;
   top: 0;
   right: 0;
@@ -1971,14 +1975,18 @@ container for booking
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  background-color: #fff;
+  background-color: #ffffff00;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 110px 20px;
+  border-radius: 30%;
 }
 
 .green-booking-container  img {
   max-width: 100%;
   height: auto;
+  border-radius: 30%;
+  align-items: center;
+  margin-left: 13px;
 }
 
 .green-booking-container  button {
@@ -1995,4 +2003,30 @@ container for booking
 .green-booking-container  button:hover {
   background-color: #00cc00;
 }
+/*************************
+reviews, qualification and location for mechanic
+**************************/
+.green-collapsible {
+  cursor: pointer;
+}
+
+.green-collapsible-content {
+  display: none;
+}
+
+.qualification-container {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  align-items: left;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.qualification-container ul,li{
+color: black;
+margin: 5px;
+}
+
 
