@@ -42,7 +42,7 @@ findServiceButton.addEventListener('click', function (event) {
 
     const postcodeRegex = /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i; // Regular expression for British postcode format
     if (!postcodeRegex.test(locationValue)) {
-        alert('Please enter a valid British postcode'); // Display error message if input is not a valid postcode
+        alert('Please enter a valid British postcode, like SE1 6RN'); // Display error message if input is not a valid postcode
         return; // Exit the function
     }
 
