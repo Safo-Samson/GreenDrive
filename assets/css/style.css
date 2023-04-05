@@ -1902,13 +1902,13 @@ sliding across
 .green-slide-across {
   position:absolute;
   white-space: nowrap;
-  animation: slide 10s linear infinite;
+  animation: slide 7s linear infinite;
   background-color: black;
 }
 
 @keyframes slide {
   0% {
-    left: -100%;
+    left: -70%;
   }
 
   100% {
