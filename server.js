@@ -11,6 +11,8 @@ const User = require('./models/User');
 const app = express();
 const port = process.env.PORT || 3001;
 
+connect(); // Connect to MongoDB using the connect function in db.js
+
 // Serve static files
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
@@ -28,8 +30,8 @@ app.use(
 
 app.post('/register', async (req, res) => {
   const { email, password, userType } = req.body;
-  const db = await connect();
-  const userModel = new User(db);
+
+  const userModel = new User();
 
   const existingUser = await userModel.getUserByEmail(email);
 

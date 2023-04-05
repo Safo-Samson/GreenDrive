@@ -1,16 +1,20 @@
-const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 
-async function connect() {
-  const client = new MongoClient(mongodb+srv://Greendrive2023:Greendrive123@cluster0.poflabt.mongodb.net/?retryWrites=true&w=majority {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+const mongoUrl = 'mongodb+srv://Greendrive2023:Greendrive123@cluster0.poflabt.mongodb.net/Greendrive_db?retryWrites=true&w=majority';
 
-  await client.connect();
-  console.log('Connected to database');
+const connect = async () => {
+  try {
+    await mongoose.connect(mongoUrl, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    });
 
-  const db = client.db('your_database_name');
-  return db;
-}
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Failed to connect to MongoDB', error);
+  }
+};
 
 module.exports = connect;
