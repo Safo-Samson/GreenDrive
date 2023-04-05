@@ -166,7 +166,7 @@
 
             <div class="green-booking-container">
                 <img src="/assets/img/ourteam1.jpg" alt="Image description">
-                <button class="green-blink">Book Safo</button>
+                <button class="green-blink book-mechanic">Book Safo</button>
             </div>
 
 
@@ -187,14 +187,14 @@
 
         <div class="left-footer">
             <ul>
-              <h4>Help and Support</h4>
-              <li><a href="guides.html">How it works</a></li>
-              <!-- <li> (link to guides page)</li> -->
-              <li><a href="contact.html">Contact Us</a></li>
-              <!-- <li>Contact Us</li> -->
-              <li><a href="about.html">About Us</a></li>
+                <h4>Help and Support</h4>
+                <li><a href="guides.html">How it works</a></li>
+                <!-- <li> (link to guides page)</li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- <li>Contact Us</li> -->
+                <li><a href="about.html">About Us</a></li>
             </ul>
-          </div>
+        </div>
 
 
         <div class="middle-footer header-social-links">
@@ -233,6 +233,7 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/serviceFinder.js"></script>
 
     <script>
         let mapLink = document.getElementById('map-button');
@@ -245,6 +246,14 @@
                 mapContainer.style.display = "none";
                 mapLink.textContent = "view map"
             }
+        });
+
+        const bookButtons = document.querySelectorAll('.book-mechanic');
+
+        bookButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = '/appointment.html';
+            });
         });
     </script>
 

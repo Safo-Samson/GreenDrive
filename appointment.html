@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>GreenDrive Hub</title> <!--Changed the title-->
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/assets/img/favicon.png" rel="icon">
+    <!--Changes made to favicon, from apple-touch to Portfolio favicon-->
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets//aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!--to get back and forward arrows-->
+    <script src="https://kit.fontawesome.com/d11fac47f6.js" crossorigin="anonymous"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js" defer></script>
+    <!-- <script src="/assets/js/cursor_Animate.js" defer></script> -->
+    <script src="/assets/js/misc.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <!-- <h1 class="logo me-auto me-lg-0"><a href="index.html">GreenDrive<img src="#" alt=""></a></h1> -->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="index.html" class="logo"><img src="assets/img/green drive-10.svg" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="service-provider.html">Service Providers</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+            <div class="header-social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" style="margin: 120px 80px;">
+
+        <div id="green-calender">
+            <div id="green-calender-header" style="margin-top: 15px;">
+                <button id="prev-month">&#10094;</button>
+                <h2 id="month-year"></h2>
+                <button id="next-month">&#10095;</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody id="green-calendar-body">
+                </tbody>
+            </table>
+            <input type="text" id="selected-date" readonly>
+            <button id="book-btn">Book</button>
+        </div>
+
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <br>
+                <h3 id="success-message" class="green-blink"></h3>
+
+                <h4>Thank you for choosing GreenDrive!</h4>
+                <h4> You will be redirected to homepage.</h4>
+                <span class="close">&times;</span>
+            </div>
+        </div>
+
+
+        <div class="slogan">
+            <h1 style="font-weight: bolder; color: white">Drive Into The Future...</h1>
+        </div>
+
+
+    </main>
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer"><!--id="footer"-->
+
+        <div class="left-footer">
+            <ul>
+                <h4>Help and Support</h4>
+                <li><a href="guides.html">How it works</a></li>
+                <!-- <li> (link to guides page)</li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- <li>Contact Us</li> -->
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+
+        <div class="middle-footer header-social-links">
+            <ul>
+                <h4>Follow Us</h4>
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+            </ul>
+        </div>
+
+        <div class="right-footer">
+            <ul>
+                <h4>Resources</h4>
+                <li>Apply to be a mechanic</li>
+                <li>our Services</li>
+            </ul>
+        </div>
+        <!-- <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>GreenDrive Hub</span></strong> All Rights Reserved <br>
+      </div>
+    </div> -->
+    </footer><!-- End  Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script>
+        //  to hide the horizontal bar that comes with the sliding
+        window.onload = function () {
+            document.body.style.overflowX = 'hidden';
+        }
+    </script>
+
+
+    <!-- <div class="cursor"></div> -->
+</body>
+
+</html>
