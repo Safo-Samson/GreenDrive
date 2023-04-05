@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname)));
 // Session configuration
 app.use(
   session({
-    secret: 'your_secret_key', // replace this with your own secret key
+    secret: Greendrive, // replace this with your own secret key
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: 'mongodb+srv://Greendrive2023:Greendrive123@cluster0.poflabt.mongodb.net/your_database_name?retryWrites=true&w=majority' }),
