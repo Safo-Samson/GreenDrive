@@ -154,12 +154,17 @@
 
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-end"> <!--align-items-center took this style of-->
+  <section id="hero" class="d-flex"> <!--align-items-center took this style of-->
 
-    <div class="container d-flex left-align" data-aos="zoom-in" data-aos-delay="200">
-      <div class="slogan">
-        <h1 class="green-slide-across">Drive Into The Future...</h1>
-      </div>
+    <!-- <div class="circular-text">
+      <h1 style="color: white; background-color: rgba(0, 0, 0, 0.278); padding: 10px; border-radius: 10px;">
+        Welcome to... <br> GreenDrive Hub</h1>
+    </div> -->
+
+    <div class=" container d-flex" data-aos="zoom-in" data-aos-delay="200" style="align-items: flex-end;">
+
+      <h1 class="green-slide-across" style="padding: 5px 12px; border-radius: 5px;">Drive Into The Future...</h1>
+
     </div>
   </section><!-- End Hero -->
 
@@ -348,6 +353,17 @@
     //  to hide the horizontal bar that comes with the sliding
     window.onload = function () {
       document.body.style.overflowX = 'hidden';
+    }
+  </script>
+
+  <script>
+    const heroSection = document.getElementById("hero");
+    const h1Element = document.querySelector("h1");
+
+    if (heroSection.contains(h1Element)) {
+      h1Element.style.display = "block";
+    } else {
+      h1Element.style.display = "none";
     }
   </script>
 
