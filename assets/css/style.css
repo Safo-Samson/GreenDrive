@@ -604,21 +604,6 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
   right: 15px;
 }
 
-/*-------------------------------------------------------------
-    Font alignment in hero
---------------------------------------------------------------*/
-.inner{
-  text-align: left;
-}
-
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
-}
-
 
 /*--------------------------------------------------------------
 # Sections General
@@ -1841,6 +1826,7 @@ Style for slogan
   width: 80%;
   border-radius: 15px;
   text-align: center;
+  
 }
 
 /*******************************************************
@@ -1942,3 +1928,71 @@ blinking texts
   animation: blink 2s infinite;
   text-align: center;
 }
+
+/**************************************
+circular texts
+**************************************/
+.circular-text {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+
+}
+
+ #hero .circular-text h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: circular 10s infinite linear;
+  opacity: 1;
+}
+
+@keyframes circular {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translate(150px) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translate(150px) rotate(-360deg);
+  }
+}
+/***********************************
+container for booking
+***********************************/
+
+.green-booking-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 110px 20px;
+}
+
+.green-booking-container  img {
+  max-width: 100%;
+  height: auto;
+}
+
+.green-booking-container  button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #14b73a;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.green-booking-container  button:hover {
+  background-color: #00cc00;
+}
+
