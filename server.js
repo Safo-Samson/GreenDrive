@@ -21,7 +21,7 @@ app.use(
     secret: 'Greendrive', // replace this with your own secret key
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: 'mongodb+srv://Greendrive2023:Greendrive123@cluster0.poflabt.mongodb.net/freendrive_db?retryWrites=true&w=majority' }),
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://Greendrive2023:Greendrive123@cluster0.poflabt.mongodb.net/Greendrive_db?retryWrites=true&w=majority' }),
     cookie: { maxAge: 86400000 },
   })
 );
