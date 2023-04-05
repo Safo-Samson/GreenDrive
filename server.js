@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 const port = process.env.PORT || 3001;
