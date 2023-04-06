@@ -125,10 +125,10 @@ nextMonthBtn.addEventListener('click', function () {
  *************************/
 
 // Get the modal
-const modal = document.getElementById('myModal');
+const modal = document.getElementById('green-calendar-modal');
 
 // Get the <span> element that closes the modal
-const span = document.getElementsByClassName('close')[0];
+const span = document.getElementsByClassName('green-calendar-close')[0];
 
 // Function to show the modal with success message
 function showModal() {
