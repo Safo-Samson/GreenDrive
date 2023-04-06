@@ -170,7 +170,7 @@
             <!--Profile picture-->
             <div class="green-booking-container">
                 <img src="/assets/img/ourtem2.jpg" alt="Image description">
-                <button class="green-blink">Book Eben</button>
+                <button class="green-blink book-mechanic">Book Eben</button>
             </div>
 
         </section>
@@ -246,6 +246,14 @@
                 mapContainer.style.display = "none";
                 mapLink.textContent = "view map"
             }
+        });
+
+        const bookButtons = document.querySelectorAll('.book-mechanic');
+
+        bookButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                window.location.href = '/appointment.html';
+            });
         });
     </script>
 

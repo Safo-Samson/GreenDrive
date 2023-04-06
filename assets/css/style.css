@@ -2029,4 +2029,115 @@ color: black;
 margin: 5px;
 }
 
+/*************************
+calender styling
+**************************/
 
+#green-calender {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+#green-calender-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead th {
+  padding: 5px;
+  border-bottom: 1px solid #000000;
+  color: black;
+}
+
+tr th{
+  color: black;
+}
+tbody td {
+  padding: 5px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  color: black;
+}
+tbody td:hover {
+  background-color: #0cbc38d5;
+}
+#book-btn {
+  display: none;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #176c06;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#book-btn:hover {
+  background-color: #2dc30f;
+}
+#selected-date{
+margin: 10px;
+width: 98px;
+background-color: #ffffff7a;
+border: 2px solid rgb(8, 165, 8);
+}
+
+td.selected {
+  background-color: rgb(40, 120, 9);
+}
+
+/*************************
+success modal
+**************************/
+
+.green-calendar-modal {
+  /* margin-top: 130px; */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.819); /* Black w/ opacity */
+  align-items: center;
+}
+
+/* Modal Content/Box */
+.green-calendar-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #238f05;
+  width: 60%; /* Could be more or less, depending on screen size */
+  height: 40%;
+  font-size: xx-large;
+  text-align: center;
+  color: black;
+}
+
+/* The Close Button */
+.green-calendar-close {
+  color: #f40303;
+  float: right;
+  font-size: 60px;
+  font-weight: bolder;
+  top: 0;
+  left: 0;
+  display: inline;
+
+}
+
+.green-calendar-close:hover,
+.green-calendar-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
