@@ -5,19 +5,13 @@ document.getElementById('register-form').addEventListener('submit', async (event
     const password = document.getElementById('password').value;
     const userType = document.getElementById('userType').value;
   
-    const userData = {
-      email,
-      password,
-      userType,
-    };
-  
     try {
       const response = await fetch('http://localhost:3001/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(userData),
+        body: JSON.stringify({ email, password, userType }),
       });
   
       if (response.status !== 201) {
