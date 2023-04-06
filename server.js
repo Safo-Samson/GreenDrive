@@ -27,32 +27,37 @@ app.use(
 );
 
 app.post('/register', async (req, res) => {
-  const { email, password, userType } = req.body;
-  const db = await connect();
-  const userModel = new User(db);
+  try {
+    const { email, password, userType } = req.body;
+    const db = await connect();
+    const userModel = new User(db);
 
-  const existingUser = await userModel.getUserByEmail(email);
+    const existingUser = await userModel.getUserByEmail(email);
 
-  if (existingUser) {
-    return res.status(400).json({ message: 'User already exists' });
+    if (existingUser) {
+      return res.status(400).json({ message: 'User already exists' });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = {
+      email,
+      password: hashedPassword,
+      userType,
+    };
+
+    const createdUser = await userModel.createUser(newUser);
+    delete createdUser.password;
+
+    const token = jwt.sign({ id: createdUser._id }, 'jwt_secret', {
+      expiresIn: '1d',
+    });
+
+    req.session.token = token;
+    res.status(201).json(createdUser);
+  } catch (error) {
+    console.error('Error in /register:', error);
+    res.status(500).json({ message: 'An error occurred during registration.' });
   }
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-  const newUser = {
-    email,
-    password: hashedPassword,
-    userType,
-  };
-
-  const createdUser = await userModel.createUser(newUser);
-  delete createdUser.password;
-
-  const token = jwt.sign({ id: createdUser._id }, 'jwt_secret', {
-    expiresIn: '1d',
-  });
-
-  req.session.token = token;
-  res.status(201).json(createdUser);
 });
 
 // Catch-all route to serve the main HTML file
