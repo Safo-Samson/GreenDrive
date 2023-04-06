@@ -8,9 +8,19 @@ class User {
     }
   
     async createUser(user) {
-      const result = await this.collection.insertOne(user);
-      return result.ops[0];
-    }
+        try {
+          const result = await this.db.collection('users').insertOne(user);
+          if (result && result.ops && result.ops.length > 0) {
+            return result.ops[0];
+          } else {
+            throw new Error('Failed to insert user');
+          }
+        } catch (error) {
+          console.error('Error in createUser:', error);
+          throw error;
+        }
+      }
+      
   }
   
   module.exports = User;
