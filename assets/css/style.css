@@ -2029,6 +2029,18 @@ color: black;
 margin: 5px;
 }
 
+.green-review-star{
+  color: rgb(107, 90, 4);
+}
+
+.green-location-logo{
+  color: black;
+  font-size: 20px;
+}
+
+.green-qualification-logo{
+  color: black;
+}
 /*************************
 calender styling
 **************************/
@@ -2141,3 +2153,4 @@ success modal
   text-decoration: none;
   cursor: pointer;
 }
+
