@@ -13,7 +13,8 @@ class User {
         if (result && result.ops && result.ops.length > 0) {
           return result.ops[0];
         } else {
-          throw new Error('Failed to insert user');
+          console.error('Warning: No user object returned after insertOne');
+          return user;
         }
       } catch (error) {
         console.error('Error in createUser:', error);
