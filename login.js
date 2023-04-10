@@ -16,5 +16,16 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
       if (response.status !== 200) {
         const errorData = await response.json();
         alert(errorData.message);
-        return
+        return;
+      } 
+  
+      const userData = await response.json();
+      localStorage.setItem('userId', userData.userId);
+      alert('Login successful');
+      window.location.href = '/'; // Redirect to the homepage or any desired page
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('An error occurred during login. Please try again.');
+    }
+  });
   
