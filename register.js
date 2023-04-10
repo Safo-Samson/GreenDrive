@@ -14,7 +14,10 @@ document.getElementById('register-form').addEventListener('submit', async (event
         body: JSON.stringify({ email, password, userType }),
       });
   
-      if (response.status !== 201) {
+      if (response.status === 400) {
+        const errorData = await response.json();
+        throw new Error(errorData.message);
+      } else if (response.status !== 201) {
         throw new Error(`Error: ${response.statusText}`);
       }
   
@@ -23,7 +26,11 @@ document.getElementById('register-form').addEventListener('submit', async (event
       alert('User registered successfully');
     } catch (error) {
       console.error(error);
-      alert('Failed to register user');
+      if (error.message === 'User already exists') {
+        alert('User already exists');
+      } else {
+        alert('Failed to register user');
+      }
     }
   });
   
