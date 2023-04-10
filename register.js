@@ -6,7 +6,7 @@ document.getElementById('register-form').addEventListener('submit', async (event
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const userType = document.getElementById('userType').value;
-  
+  // send POST req to server
     try {
       const response = await fetch('http://localhost:3001/register', {
         method: 'POST',
