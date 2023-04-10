@@ -1,3 +1,5 @@
+// to handle registration process this file listens for the registration form to be submitted, it will collect the user reg data
+
 document.getElementById('register-form').addEventListener('submit', async (event) => {
     event.preventDefault();
   
@@ -13,11 +15,11 @@ document.getElementById('register-form').addEventListener('submit', async (event
         },
         body: JSON.stringify({ email, password, userType }),
       });
-  
-      if (response.status === 400) {
+      // 400 is a HTTP Status code for: bad request
+      if (response.status === 400) {        
         const errorData = await response.json();
         throw new Error(errorData.message);
-      } else if (response.status !== 201) {
+      } else if (response.status !== 201) {       // 201: status code for created
         throw new Error(`Error: ${response.statusText}`);
       }
   
