@@ -60,6 +60,36 @@ app.post('/register', async (req, res) => {
   }
 });
 
+app.post('/api/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const db = await connect();
+    const userModel = new User(db);
+
+    const existingUser = await userModel.getUserByEmail(email);
+
+    if (!existingUser) {
+      return res.status(400).json({ message: 'User not found' });
+    }
+
+    const isPasswordValid = await bcrypt.compare(password, existingUser.password);
+
+    if (!isPasswordValid) {
+      return res.status(400).json({ message: 'Invalid password' });
+    }
+
+    const token = jwt.sign({ id: existingUser._id }, 'jwt_secret', {
+      expiresIn: '1d',
+    });
+
+    req.session.token = token;
+    res.status(200).json({ userId: existingUser._id });
+  } catch (error) {
+    console.error('Error in /api/login:', error);
+    res.status(500).json({ message: 'An error occurred during login.' });
+  }
+});
+
 // Catch-all route to serve the main HTML file
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
