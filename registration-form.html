@@ -36,7 +36,7 @@
 </head>
 
 
-<body>
+<body class="login-reg-body">
 
    <!-- ======= Header ======= -->
    <header id="header" class="fixed-top">
@@ -52,42 +52,41 @@
           <li><a href="service-provider.html">Service Providers</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="news.html">News</a></li>
-          <li><a class="active" href="guides.html">Guides</a></li>
+          <li><a href="guides.html">Guides</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>
 
-    </div>
+          <!-- Login & register buttons  -->
+        <button class="log-reg-button" onclick="window.location.href='login.html';">Login</button>
+        <button class="log-reg-button" onclick="window.location.href='registration-form.html';">Sign Up</button>
+
+      </div>
   </header><!-- End Header -->
 
-  <section>
+  <section class="login-reg-form-section">
   <h1>Registration Form</h1>
-
+  <br>
+  <div class="log-reg-container">
   <form id="register-form">
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" required>
-    <br>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <br><br>
+    <input type="password" id="password" placeholder="Enter your password" required>
+    <br><br>
     <label for="userType">User Type:</label>
     <select id="userType">
       <option value="customer">Customer</option>
       <option value="mechanic">Mechanic</option>
     </select>
-    <br>
+    <br><br>
     <button type="submit">Register</button>
   </form>
-
-  <script src="/assets/js/register.js"></script>
+  </div>
 </section>
+  <script src="/assets/js/register.js"></script>
+
 </body>
 </html>

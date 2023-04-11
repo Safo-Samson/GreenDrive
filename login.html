@@ -34,7 +34,7 @@
     <!--allows us to write JSX syntax and ES6 in older browsers.-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body class="login-body">
+<body class="login-reg-body">
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container-fluid d-flex justify-content-between align-items-center">
@@ -43,7 +43,7 @@
   
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="service-provider.html">Service Providers</a></li>
             <li><a href="community.html">Community</a></li>
             <li><a href="news.html">News</a></li>
@@ -54,23 +54,15 @@
         </nav><!-- .navbar -->
   
         <div class="header-social-links">
-          <ul>
-            <!-- Button to open the modal login form -->
-            <!--<button onclick="document.getElementById('id02').style.display='block'">Login</button>-->
-            <!-- Button to open the registration page -->
-            <!-- Button to open the modal  -->
-            <!-- <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button> -->
-  
-          </ul>
-  
-            <!-- Login & register buttons  -->
-          <button class="log-reg-button" onclick="window.location.href='login.html';">Login</button>
-          <button class="log-reg-button" onclick="window.location.href='registration-form.html';">Sign Up</button>
-  
-        </div>
+
+          <!-- Login & register buttons  -->
+        <button class="log-reg-button" onclick="window.location.href='login.html';">Login</button>
+        <button class="log-reg-button" onclick="window.location.href='registration-form.html';">Sign Up</button>
+
+      </div>
     </header><!-- End Header -->
 
-  <section class="login-form-sec">
+  <section class="login-reg-form-section">
     <h1>Login</h1>
     <br>
     <div class="log-reg-container">

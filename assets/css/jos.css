@@ -1,12 +1,12 @@
 /*************************
 login form page (newest login method)
 **************************/
-.login-body{
+.login-reg-body{
   background-color: #37634589;
 
 }
 
-.login-form-sec {
+.login-reg-form-section {
   /*margin-top: 100px; 
   margin-left: 100px;*/
     display: flex;
