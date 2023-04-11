@@ -15,7 +15,7 @@ const options = {
     },
 };
 
-const handleRequest = (req, res) => {
+const handleDVLARequest = (req, res) => {
     if (req.method === 'GET' && req.url === '/backend/vehicle-enquiry.js') {
         let rawData = '';
 
@@ -64,7 +64,7 @@ const handleRequest = (req, res) => {
     }
 }
 
-module.exports = handleRequest;
+module.exports = handleDVLARequest;
 
 
 

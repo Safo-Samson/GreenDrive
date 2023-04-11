@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 
 const connect = require('./db');
 const User = require('./models/User');
-const dvlaApi = require('./vehicle-enquiry') //adding the dvla to the server - SAFO
+const handleDVLARequest = require('./vehicle-enquiry') //adding the dvla to the server - SAFO
 
 const app = express();
 const port = process.env.PORT || 3001;
