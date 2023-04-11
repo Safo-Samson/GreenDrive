@@ -1,0 +1,480 @@
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #e8e2e2;
+    
+  }
+  
+  /* 
+  The :before pseudo-element is used to insert content before an element's content.
+   It is often used to add decorative elements or to display additional information.
+  
+   The -webkit-animation and animation properties are used to apply an animation to the pseudo-element, 
+   which is defined elsewhere in the CSS file.
+  */
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid green;
+    border-top-color: #e8e2e2;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: animate-preloader 1s linear infinite;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  /*
+  The @-webkit-keyframes rule is used to define the animation for webkit-based browsers, such as Google Chrome. 
+  The @keyframes rule is used to define the animation for other browsers.
+  */
+  @-webkit-keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Back to top button
+  
+  the . operator is used to style elements based on their class, and the # operator is used to style elements based on their id.
+   Both can be used to apply styles to multiple elements,
+   but the id attribute must be unique within a document, while the class attribute can be used multiple times on different elements.
+  --------------------------------------------------------------*/
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: green;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  /*
+  The z-index property in CSS is used to specify the stacking order of elements. 
+  It determines which element is displayed on top of other elements when they overlap.
+  Elements with a higher z-index value will be displayed on top of elements with a lower z-index value. 
+  If two elements have the same z-index value, the element that appears later in the HTML document will be displayed on top.
+  */
+  
+  .back-to-top i {
+    font-size: 24px;
+    color: #e8e2e2;
+    line-height: 0;
+  }
+  
+  .back-to-top:hover {
+    /* background: #49cbbb; */
+    background: #000000;
+    color: #e8e2e2;
+  }
+  
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .gradient {
+    background-image: linear-gradient(to bottom, red 0%, blue 50%);
+  }
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+  
+    background: linear-gradient(to right, rgb(1, 48, 1) 20%,rgb(66, 169, 66) 30%);
+    box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+    z-index: 997;
+    padding: 15px 0;
+  }
+  
+  #header .logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  #header .logo a {
+    color: #222222;
+  }
+  
+  #header .logo img {
+    max-height: 50px;
+    min-width: 190px; /*added this myself to make sure the logo was wide and clear but realised this widens up the space not the actual image */
+  }
+  
+  @media (max-width: 992px) {
+    #header .logo {
+      font-size: 28px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Header Social Links
+  --------------------------------------------------------------*/
+  .header-social-links {
+    padding-right: 15px;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+  
+  .header-social-links a {
+    /* color: #6f6f6f; */
+    color: #000000;
+    padding-left: 6px;
+    display: inline-block;
+    line-height: 0px;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+  
+  .header-social-links a:hover {
+    /* color: #34b7a7; */
+    color: green;
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Navigation 
+  */
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+    padding: 10px 0 10px 28px;
+  }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000; /* this is the color of home,about,resume etc on the header when not selected*/
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none; /*to prevent underlying of the links*/
+  }
+  
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  /*The :before pseudo-element is selected using the .navbar>ul>li>a chain of parent-child selectors,
+   which means that it will be applied to the a element that is a direct child of an li element, 
+  which is a direct child of a ul element, which is a direct child of a navbar element.
+  */
+  .navbar>ul>li>a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: green;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .navbar a:hover:before,
+  .navbar li:hover>a:before,
+  
+  .navbar .active:before {
+    visibility: visible;
+    width: 25px;
+  }
+  
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    /* color: #222222; */
+    color: #ffffff;
+  }
+  
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+    border-radius: 4px;
+  }
+  
+  .navbar .dropdown ul li {
+    min-width: 200px;
+    padding: 0;
+  }
+  
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 600;
+  }
+  
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar .dropdown ul a:hover,
+  .navbar .dropdown ul .active:hover,
+  .navbar .dropdown ul li:hover>a {
+    color:green;
+  
+  }
+  
+  .navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  
+  .navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  
+  @media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+  
+    .navbar .dropdown .dropdown:hover>ul {
+      left: -100%;
+    }
+  }
+  
+  /**
+  * Mobile Navigation 
+  */
+  .mobile-nav-toggle {
+    color: #222222;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
+  
+  .mobile-nav-toggle.bi-x {
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  }
+  
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(9, 9, 9, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+  }
+  
+  .navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+  
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    font-size: 15px;
+    padding-right: 15px;
+    color: #222222;
+  }
+  
+  .navbar-mobile a:hover,
+  .navbar-mobile .active,
+  .navbar-mobile li:hover>a {
+    color: green;
+  }
+  
+  .navbar-mobile .getstarted,
+  .navbar-mobile .getstarted:focus {
+    margin: 15px;
+  }
+  
+  .navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+  
+  .navbar-mobile .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+  }
+  
+  .navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar-mobile .dropdown ul a:hover,
+  .navbar-mobile .dropdown ul .active:hover,
+  .navbar-mobile .dropdown ul li:hover>a {
+    color: green;
+  }
+  
+  .navbar-mobile .dropdown>.dropdown-active {
+    display: block;
+  }
+
+
+  /**********************
+  footer
+  *********************/
+#footer h1,h2,h3,h4,h5,h6{ /*not working as intended*/
+    color: #047118;
+  }
+  #footer {
+    background: #e8e2e2;
+    /* background: #99e8e3; */
+    padding: 30px 0;
+    color: #222222;
+    font-size: 14px;
+  
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #footer .credits {
+    padding-top: 5px;
+    font-size: 13px;
+  }
+  
+  #footer .credits a {
+    color: #34b7a7;
+
+  }
+  
+  #footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .left-footer{
+    margin-left: 25px;
+  }
+  
+  .right-footer{
+    margin-right: 25px;
+  }
+  .left-footer ul,
+  .middle-footer ul,
+  .right-footer ul {
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .left-footer ul li,
+  .middle-footer ul li,
+  .right-footer ul li {
+    display: block;
+    margin: 0 10px;
+  }
+  
