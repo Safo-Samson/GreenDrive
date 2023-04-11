@@ -2,7 +2,7 @@
 login form page (newest login method)
 **************************/
 .login-reg-body{
-  background-color: #37634589;
+  background-color: #36634489;
 
 }
 
@@ -34,11 +34,34 @@ login form page (newest login method)
   cursor:pointer;
 }
 
+.log-reg-button2 {
+  background-color: #36634489;;
+  border: 2px solid rgb(112, 112, 112);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+.log-reg-button2:hover {
+  background-color: white;
+  color: black;
+}
+
+.guides-subpages-body{
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
 
 /*--------------------------------------------------------------
 ==  const/ definate style to keep consistant with rest of app   ==
 --------------------------------------------------------------*/
-/* login and register buttons */
+/* login and register buttons that appear in header nav bar */
 
 .log-reg-button {
   background-color: transparent;
