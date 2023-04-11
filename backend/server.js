@@ -7,13 +7,14 @@ const jwt = require('jsonwebtoken');
 
 const connect = require('./db');
 const User = require('./models/User');
+const dvlaApi = require('./vehicle-enquiry') //adding the dvla to the server - SAFO
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 // Serve static files
 app.use(express.json());
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, '../')));
 
 // Session configuration
 app.use(
@@ -92,7 +93,7 @@ app.post('/api/login', async (req, res) => {
 
 // Catch-all route to serve the main HTML file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 app.listen(port, () => {
