@@ -56,9 +56,45 @@
             return; // Exit the function
         }
 
+        // Send the registration number to the vehicleEnquiry.js file using an HTTP POST request
+        const xhr = new XMLHttpRequest();
+        const url = '/backend/vehicle-enquiry.js'; // URL of the vehicle-enquiry.js file
+        const data = JSON.stringify({ registrationNumber: numberPlateValue });// Data to send in the request
+
+        xhr.open('GET', url, true); //GTP gave POST but browser said method not allowed
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        xhr.onload = function () {
+            if (this.status === 200) {
+                console.log(data + ' is being sent to ' + url)
+
+                // console.log(this.responseText)
+                // // Parse the response JSON object and display the make, colour, and yearOfManufacture
+                // const response = JSON.parse(this.responseText);
+                // console.log('Make:', response.make);
+                // console.log('Colour:', response.colour);
+                // console.log('Year of Manufacture:', response.yearOfManufacture);
+            }
+            else {
+                console.log(this.status)
+            }
+        };
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.staus == 200) {
+                console.log('success!!');
+            }
+        }
+
+        xhr.onerror = function () {
+            console.error('Error:', xhr.statusText);
+        };
+
+        xhr.send(data);// Send the request
+
+
         // Navigate to services page
-        window.location.href = '/repair-conversion.html'
-            ;
+        window.location.href = '/repair-conversion.html';
     });
 
 
