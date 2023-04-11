@@ -25,7 +25,7 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/jos.css" rel="stylesheet">
   
   
     <!--React CDN -- adds react to the existing html page and allows us to write react code to javaScripts to the existing page-->
@@ -34,7 +34,7 @@
     <!--allows us to write JSX syntax and ES6 in older browsers.-->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body>
+<body class="login-body">
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container-fluid d-flex justify-content-between align-items-center">
@@ -69,19 +69,28 @@
   
         </div>
     </header><!-- End Header -->
-  <h1>Login</h1>
-  <section id="login-form-sec">
+
+  <section class="login-form-sec">
+    <h1>Login</h1>
+    <br>
+    <div class="log-reg-container">
   <form id="login-form">
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" required>
-    <br>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <br><br>
+    <input type="password" id="password" placeholder="Enter your password"required>
+    <br><br>
     <button type="submit">Login</button>
   </form>
+  <br>
+  <p>Or</p>
+  <br>
   <button type="button" class="social-login-button google-login">Continue with Google</button>
+  <br>
   <button type="button" class="social-login-button apple-login">Continue with Apple</button>
+  <br>
+  <p>No account? Click here to Register</p>
+</div>
+
 </section>
   <!-- <script src="login.js"></script> -->
   <script src="/assets/js/login.js"></script>

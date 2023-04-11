@@ -1,3 +1,55 @@
+/*************************
+login form page (newest login method)
+**************************/
+.login-body{
+  background-color: #37634589;
+
+}
+
+.login-form-sec {
+  /*margin-top: 100px; 
+  margin-left: 100px;*/
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.log-reg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+
+}
+
+
+/*--------------------------------------------------------------
+==  const/ definate style to keep consistant with rest of app   ==
+--------------------------------------------------------------*/
+/* login and register buttons */
+
+.log-reg-button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.log-reg-button:hover {
+  background-color: white;
+  color: black;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
