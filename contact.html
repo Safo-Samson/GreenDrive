@@ -170,20 +170,53 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-  function sendMessage() {
-    var loading = document.getElementById("loading");
-    var sendBtn = document.getElementById("sendBtn");
-    loading.style.display = "block"; // show the loading animation
-    sendBtn.innerText = "Sending...";// update the button text
-    // simulate sending message, replace this with your actual logic
-    setTimeout(function() {
-      loading.style.display = "none"; // hide the loading animation
-      sendBtn.innerText = "Sent!"; // reset the button text
-      sendBtn2.innerText = "Senttttt!";
-      alert("Your message has been sent. Thank you!"); // show a success message
-      loading.style.display = "none";
-    }, 2000); // change the duration as needed
+
+function sendMessage() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+  var sendBtn = document.getElementById("sendBtn");
+  var loading = document.getElementById("loading");
+  var sentMessage = document.getElementById("sent-message");
+  var errorMessage = document.getElementById("error-message");
+
+  if (name == "" || email == "" || subject == "" || message == "") {
+    alert("Please fill all fields");
+  } else {
+    sendBtn.style.display = "none";
+    loading.style.display = "block";
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "contact_form.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+      if (this.status == 200) {
+        loading.style.display = "none";
+        sentMessage.style.display = "block";
+        sendBtn.style.display = "block";
+        clearForm(); // Call function to clear form fields
+      } else {
+        loading.style.display = "none";
+        errorMessage.style.display = "block";
+        sendBtn.style.display = "block";
+      }
+      // Hide loading element after 2 seconds
+      setTimeout(function () {
+        loading.style.display = "none";
+      }, 2000);
+    }
+    xhr.send("name=" + name + "&email=" + email + "&subject=" + subject + "&message=" + message);
   }
+}
+
+function clearForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("message").value = "";
+}
+
+
 </script>
 
 </body>
