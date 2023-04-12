@@ -4,6 +4,8 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const passport = require('passport');
+
 
 const connect = require('./db');
 const User = require('./models/User');
@@ -25,6 +27,62 @@ app.use(
     store: MongoStore.create({ mongoUrl: 'mongodb+srv://Greendrive2023:Greendrive123@cluster0.poflabt.mongodb.net/Greendrive_db?retryWrites=true&w=majority' }),
     cookie: { maxAge: 86400000 },
   })
+);
+
+// Passport.js configuration
+app.use(passport.initialize());
+app.use(passport.session());
+
+const checkUserRole = (expectedRole) => {
+  return (req, res, next) => {
+    if (req.user && req.user.userType === expectedRole) {
+      next();
+    } else {
+      res.status(403).json({ message: 'Forbidden' });
+    }
+  };
+};
+
+// Example usage of the helper function in a route
+app.get('/customer-only-route', checkUserRole('customer'), (req, res) => {
+  // This route will be accessible only for users with userType 'customer'
+  res.json({ message: 'This is an example route for customer users' });
+});
+
+app.get('/mechanic-only-route', checkUserRole('mechanic'), (req, res) => {
+  // This route will be accessible only for users with userType 'mechanic'
+  res.json({ message: 'This is an example route for mechanic users' });
+});
+
+
+// Example usage of the helper function in a route
+app.get('/customer-only-route', checkUserRole('customer'), (req, res) => {
+  // This route will be accessible only for users with userType 'customer'
+  res.json({ message: 'This is an example route for customer users' });
+});
+
+app.get('/mechanic-only-route', checkUserRole('mechanic'), (req, res) => {
+  // This route will be accessible only for users with userType 'mechanic'
+  res.json({ message: 'This is an example route for mechanic users' });
+});
+
+// Add your customer and mechanic dashboard routes here
+app.get(
+  '/customer-dashboard',
+  passport.authenticate('jwt', { session: false }),
+  checkUserRole('customer'),
+  (req, res) => {
+    // Your customer dashboard logic here
+  }
+);
+
+app.get(
+  '/mechanic-dashboard',
+  passport.authenticate('jwt', { session: false }),
+  checkUserRole('mechanic'),
+  (req, res) => {
+    // Your mechanic dashboard logic here
+  }
 );
 
 app.post('/register', async (req, res) => {
@@ -82,6 +140,10 @@ app.post('/api/login', async (req, res) => {
     const token = jwt.sign({ id: existingUser._id }, 'jwt_secret', {
       expiresIn: '1d',
     });
+
+    console.log('Token:', token); //  logs the token in console for debugging purpose
+
+    res.header('authorization', `Bearer ${token}`);
 
     req.session.token = token;
     res.status(200).json({ userId: existingUser._id });

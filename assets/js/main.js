@@ -242,3 +242,71 @@
 
 
 })()
+
+/* hiding login and sign up button from header and replacing them with logout and my account when a user is signed in*/ 
+// Add the initLoginForm function here
+function initLoginForm() {
+  const loginForm = document.getElementById('login-form');
+  if (!loginForm) {
+    return;
+  }
+
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.status !== 200) {
+        const errorData = await response.json();
+        alert(errorData.message);
+        return;
+      }
+
+      const userData = await response.json();
+      localStorage.setItem('userId', userData.userId);
+      localStorage.setItem('token', `Bearer ${response.headers.get('authorization').split(' ')[1]}`);
+
+      updateButtonVisibility();
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('An error occurred during login. Please try again.');
+    }
+  });
+}
+
+// Call the initLoginForm function right after the IIFE
+initLoginForm();
+
+function updateButtonVisibility() {
+  const token = localStorage.getItem('token');
+
+  if (token) {
+    document.getElementById('login-btn').style.display = 'none';
+    document.getElementById('signup-btn').style.display = 'none';
+    document.getElementById('my-account-btn').style.display = 'inline-block';
+    document.getElementById('logout-btn').style.display = 'inline-block';
+  } else {
+    document.getElementById('login-btn').style.display = 'inline-block';
+    document.getElementById('signup-btn').style.display = 'inline-block';
+    document.getElementById('my-account-btn').style.display = 'none';
+    document.getElementById('logout-btn').style.display = 'none';
+  }
+}
+
+document.getElementById('logout-btn').addEventListener('click', () => {
+  localStorage.removeItem('token');
+  updateButtonVisibility();
+});
+
+// Call updateButtonVisibility on page load to set the initial button visibility
+updateButtonVisibility();
