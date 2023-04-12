@@ -79,6 +79,15 @@ login form page (newest login method)
   background-color: white;
   color: black;
 }
+
+/*************************
+Charging guides page
+**************************/
+.charging-guides-title{
+background-image: url("../assets/img/charging-car-for-guides.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
