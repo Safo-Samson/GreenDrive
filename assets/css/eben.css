@@ -521,11 +521,11 @@
 
 
 
-/* 
-  .loading {
+
+  /* .loading {
     display: none;
     position: relative;
-  }
+  } */
 
   .loading {
     display: none;
@@ -547,9 +547,9 @@
     100% {
       transform: rotate(360deg);
     }
-  }  */
+  }  
 
   .form-control.shadow {
-    box-shadow: 0px 4px 8px rgb(117, 9, 233); /* Update the shadow properties as needed */
+    box-shadow: 0px 4px 8px rgb(117, 9, 233); Update the shadow properties as needed
   }
   
