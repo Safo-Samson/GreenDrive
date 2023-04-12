@@ -55,17 +55,6 @@ app.get('/mechanic-only-route', checkUserRole('mechanic'), (req, res) => {
 });
 
 
-// Example usage of the helper function in a route
-app.get('/customer-only-route', checkUserRole('customer'), (req, res) => {
-  // This route will be accessible only for users with userType 'customer'
-  res.json({ message: 'This is an example route for customer users' });
-});
-
-app.get('/mechanic-only-route', checkUserRole('mechanic'), (req, res) => {
-  // This route will be accessible only for users with userType 'mechanic'
-  res.json({ message: 'This is an example route for mechanic users' });
-});
-
 // Add your customer and mechanic dashboard routes here
 app.get(
   '/customer-dashboard',
@@ -152,6 +141,8 @@ app.post('/api/login', async (req, res) => {
     res.status(500).json({ message: 'An error occurred during login.' });
   }
 });
+
+
 
 // Catch-all route to serve the main HTML file
 app.get('*', (req, res) => {
