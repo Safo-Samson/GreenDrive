@@ -1,4 +1,24 @@
+/*--------------------------------------------------------------
+==  const/ definate style to keep consistant with rest of app   ==
+--------------------------------------------------------------*/
+/* login and register buttons that appear in header nav bar */
 
+.log-reg-button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.log-reg-button:hover {
+  background-color: white;
+  color: black;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
