@@ -50,15 +50,20 @@ login form page (newest login method)
   color: black;
 }
 
-.guides-subpages-body{
-  margin-top: 100px;
+.guides-subpages-content{
+  margin-top: 10px;
   margin-left: 100px;
   margin-right: 100px;
-
 }
 
-#charging-guides-title{
-  margin-left: 0px;
+.charging-guides-title {
+  margin-top: 80px;
+}
+.charging-guides-title img {
+  height: auto;
+  max-width: 100%;
+
+
 }
 
 /*--------------------------------------------------------------
