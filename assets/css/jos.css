@@ -57,6 +57,9 @@ login form page (newest login method)
 
 }
 
+#charging-guides-title{
+  margin-left: 0px;
+}
 
 /*--------------------------------------------------------------
 ==  const/ definate style to keep consistant with rest of app   ==
@@ -80,14 +83,6 @@ login form page (newest login method)
   color: black;
 }
 
-/*************************
-Charging guides page
-**************************/
-.charging-guides-title{
-background-image: url("../assets/img/charging-car-for-guides.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
