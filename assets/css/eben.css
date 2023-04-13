@@ -498,10 +498,10 @@
     margin: 0 10px;
   }
   .send-message-button {
-    background-color: transparent;
-    border: 2px solid rgb(5, 168, 41);
+    background-color: rgba(4, 85, 4, 0.781);
+    border: 2px solid white;
     border-radius: 5px;
-    color: rgb(5,168,41);
+    color: white;
     cursor: pointer;
     padding: 5px 10px;
     text-decoration: none;
@@ -570,6 +570,152 @@
   }  
 
   .form-control.shadow {
-    box-shadow: 0px 4px 8px rgb(117, 9, 233); Update the shadow properties as needed
+     box-shadow: 0px 4px 8px rgb(117, 9, 233);/* Update the shadow properties as needed */
   }
-  
+
+
+  /* Reset some default styles */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the community page */
+.community-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: rgba(4, 85, 4, 0.781);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+     margin-bottom: 10px;
+}
+
+/* Style for the hero section */
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.join-btn {
+  padding:
+8px 16px;
+background-color: #0079d3;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* Style for the posts section */
+.posts-section {
+margin-bottom: 40px;
+}
+
+.section-title {
+font-size: 24px;
+font-weight: bold;
+color: #000;
+margin-bottom: 20px;
+}
+
+.post-list {
+list-style-type: none;
+}
+
+.post-item {
+margin-bottom: 20px;
+}
+
+.post-meta {
+font-size: 14px;
+color: #666;
+margin-bottom: 5px;
+}
+
+.post-author {
+color: #0079d3;
+font-weight: bold;
+}
+
+.post-time {
+margin-left: 10px;
+}
+
+.post-title {
+font-size: 18px;
+font-weight: bold;
+color: #000;
+margin-bottom: 5px;
+}
+
+.post-description {
+font-size: 14px;
+color: #666;
+margin-bottom: 10px;
+}
+
+.post-actions {
+font-size: 14px;
+color: #666;
+}
+
+.post-upvotes {
+margin-right: 10px;
+}
+
+/* Add additional styles as needed for other sections or elements */
+
+
+
+
