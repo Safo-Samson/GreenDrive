@@ -1739,10 +1739,12 @@ Login Up
       position: relative;   /* to position the image inside the container */
 
      /* add a margin to create space between the section and the container */
-      margin-right: auto; /* center the container horizontally */
-      margin-left: auto; /* center the container horizontally */
+      margin-right: 100px; 
+      margin-left: 120px;
       border: 3px solid #249f09e6;
+      
     }
+    
 
     .Green-slideshow-container img {
       width: 100%;      /* make the image fill the width of the container */
@@ -2206,8 +2208,8 @@ general news
   width: 500px;
   height: 400px;
   object-fit: cover;
-  border: 3px solid black;
+  border: 3px solid rgb(12, 155, 9);
   border-style: groove;
-  
+  border-radius: 20%;
 }
 
