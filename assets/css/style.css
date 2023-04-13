@@ -1645,9 +1645,20 @@ Login Up
 .guides-grid-item{
   background-color: #000000e6; /*doesnt how because the images covers it*/
   /* padding: 20px; */
-  border: 3px solid #249f09e6;
+  /* border: 3px solid #249f09e6; */
+  background-color:#09290200;; /*completely transparent to see background of homepage*/
   
   position: relative;/* Set the grid item to position:relative to position the overlay */
+}
+
+.mount-down{
+  border-radius:  0  0 50% 50%; 
+  border: 3px solid green;
+}
+
+.mount-up{
+  border-radius:  50% 50% 0  0 ; 
+  border: 3px solid green;
 }
 .guides-grid-item img {
   max-width: 100%;

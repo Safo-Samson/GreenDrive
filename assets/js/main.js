@@ -243,7 +243,7 @@
 
 })()
 
-/* hiding login and sign up button from header and replacing them with logout and my account when a user is signed in*/ 
+/* hiding login and sign up button from header and replacing them with logout and my account when a user is signed in*/
 // Add the initLoginForm function here
 function initLoginForm() {
   const loginForm = document.getElementById('login-form');
@@ -282,31 +282,41 @@ function initLoginForm() {
       alert('An error occurred during login. Please try again.');
     }
   });
-}
 
-// Call the initLoginForm function right after the IIFE
-initLoginForm();
 
-function updateButtonVisibility() {
-  const token = localStorage.getItem('token');
 
-  if (token) {
-    document.getElementById('login-btn').style.display = 'none';
-    document.getElementById('signup-btn').style.display = 'none';
-    document.getElementById('my-account-btn').style.display = 'inline-block';
-    document.getElementById('logout-btn').style.display = 'inline-block';
-  } else {
-    document.getElementById('login-btn').style.display = 'inline-block';
-    document.getElementById('signup-btn').style.display = 'inline-block';
-    document.getElementById('my-account-btn').style.display = 'none';
-    document.getElementById('logout-btn').style.display = 'none';
+
+
+
+  /**
+   * Logging in and account
+   */
+
+  // Call the initLoginForm function right after the IIFE
+  initLoginForm();
+
+  function updateButtonVisibility() {
+    const token = localStorage.getItem('token');
+
+    if (token) {
+      document.getElementById('login-btn').style.display = 'none';
+      document.getElementById('signup-btn').style.display = 'none';
+      document.getElementById('my-account-btn').style.display = 'inline-block';
+      document.getElementById('logout-btn').style.display = 'inline-block';
+    } else {
+      document.getElementById('login-btn').style.display = 'inline-block';
+      document.getElementById('signup-btn').style.display = 'inline-block';
+      document.getElementById('my-account-btn').style.display = 'none';
+      document.getElementById('logout-btn').style.display = 'none';
+    }
   }
-}
 
-document.getElementById('logout-btn').addEventListener('click', () => {
-  localStorage.removeItem('token');
+  document.getElementById('logout-btn').addEventListener('click', () => {
+    localStorage.removeItem('token');
+    updateButtonVisibility();
+  });
+
+  // Call updateButtonVisibility on page load to set the initial button visibility
   updateButtonVisibility();
-});
 
-// Call updateButtonVisibility on page load to set the initial button visibility
-updateButtonVisibility();
+}
