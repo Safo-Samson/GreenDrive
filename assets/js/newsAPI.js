@@ -85,8 +85,10 @@ fetch(url)
             articleElement.appendChild(previewElement);
             articleElement.appendChild(linkElement);
 
+
             // Add the article container to the news container
             newsContainer.appendChild(articleElement);
+
         });
     })
     .catch(error => {
