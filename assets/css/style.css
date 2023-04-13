@@ -2196,4 +2196,18 @@ success modal
 }
 
 
+/*************************
+general news
+**************************/
+#general-news{
+  background: rgba(255, 255, 255, 0.593);
+}
+.news-image {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  border: 3px solid black;
+  border-style: groove;
+  
+}
 
