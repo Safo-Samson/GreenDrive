@@ -54,6 +54,7 @@ app.post('/register', async (req, res) => {
       userType,
     };
 
+
     const createdUser = await userModel.createUser(newUser);
     delete createdUser.password;
 
@@ -76,6 +77,7 @@ app.post('/api/login', async (req, res) => {
     const userModel = new User(db);
 
     const existingUser = await userModel.getUserByEmail(email);
+  
 
     if (!existingUser) {
       return res.status(400).json({ message: 'User not found' });
@@ -91,15 +93,28 @@ app.post('/api/login', async (req, res) => {
       expiresIn: '1d',
     });
 
-    console.log('Token:', token); //  logs the token in console for debugging purpose
-
     res.header('authorization', `Bearer ${token}`);
 
     req.session.token = token;
-    res.status(200).json({ userId: existingUser._id });
+    res.status(200).json({ userId: existingUser._id, userType: existingUser.userType }); 
   } catch (error) {
     console.error('Error in /api/login:', error);
     res.status(500).json({ message: 'An error occurred during login.' });
+  }
+});
+
+app.get('/api/user-info', passport.authenticate('jwt', { session: false }), async (req, res) => {
+  try {
+    const { user } = req;
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.status(200).json({ userId: user._id, userType: user.userType });
+  } catch (error) {
+    console.error('Error in /api/user-info:', error);
+    res.status(500).json({ message: 'An error occurred while fetching user information.' });
   }
 });
 

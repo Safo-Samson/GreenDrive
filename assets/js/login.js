@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password}),
       });
 
       console.log(response.headers.get('authorization'));
@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
       } 
   
       const userData = await response.json();
-      console.log(response.headers.get('authorization'));
+      console.log(userData)
+      // console.log(response.headers.get('authorization'));
 
       // Checking if the authorization header exists in the response
       const authorizationHeader = response.headers.get('authorization');
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       localStorage.setItem('userId', userData.userId);
+      localStorage.setItem('userType', userData.userType)
       localStorage.setItem('token', `Bearer ${response.headers.get('authorization').split(' ')[1]}`);  // to save the token in localStorage
       alert('Login successful');
       window.location.href = '/'; // Redirect to the homepage or any desired page

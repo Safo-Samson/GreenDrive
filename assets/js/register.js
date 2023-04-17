@@ -26,6 +26,8 @@ document.getElementById('register-form').addEventListener('submit', async (event
       const jsonResponse = await response.json();
       console.log(jsonResponse);
       alert('User registered successfully');
+      localStorage.setItem('userType', userType);
+      
     } catch (error) {
       console.error(error);
       if (error.message === 'User already exists') {
