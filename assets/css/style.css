@@ -1668,6 +1668,7 @@ Login Up
 
 .news{
   /* background-color: black; */
+  background: url(/assets/img/NewsBackground.png);
 }
 .news h1,h2,h3,h4,h5{
   color: rgb(5, 155, 52);

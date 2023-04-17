@@ -499,7 +499,7 @@
   }
   .send-message-button {
     background-color: rgba(4, 85, 4, 0.781);
-    border: 2px solid white;
+    border: 2px solid green;
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -538,7 +538,11 @@
     to { transform: rotate(360deg); }
   } */
 
-
+/* .patterns {
+  background-color: #2e4057;
+  height: 100vh;
+  margin-top: 190px;
+} */
 
 
 
@@ -629,6 +633,12 @@ body, h1, h2, h3, p {
 }
 
 /* Style for the hero section */
+
+#community{
+  margin-top: 90px;
+  background: url('/assets/img/community1.png');
+}
+
 .hero-section {
   text-align: center;
   margin-bottom: 40px;
@@ -648,15 +658,23 @@ body, h1, h2, h3, p {
 }
 
 .join-btn {
-  padding:
-8px 16px;
-background-color: #0079d3;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+  background-color: rgba(4, 85, 4, 0.781);
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+     margin-bottom: 10px;
 }
 
+.join-btn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid rgba(4, 85, 4, 0.781);
+}
 /* Style for the posts section */
 .posts-section {
 margin-bottom: 40px;
