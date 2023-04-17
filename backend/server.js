@@ -33,46 +33,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-const checkUserRole = (expectedRole) => {
-  return (req, res, next) => {
-    if (req.user && req.user.userType === expectedRole) {
-      next();
-    } else {
-      res.status(403).json({ message: 'Forbidden' });
-    }
-  };
-};
 
-// Example usage of the helper function in a route
-app.get('/customer-only-route', checkUserRole('customer'), (req, res) => {
-  // This route will be accessible only for users with userType 'customer'
-  res.json({ message: 'This is an example route for customer users' });
-});
-
-app.get('/mechanic-only-route', checkUserRole('mechanic'), (req, res) => {
-  // This route will be accessible only for users with userType 'mechanic'
-  res.json({ message: 'This is an example route for mechanic users' });
-});
-
-
-// Add your customer and mechanic dashboard routes here
-app.get(
-  '/customer-dashboard',
-  passport.authenticate('jwt', { session: false }),
-  checkUserRole('customer'),
-  (req, res) => {
-    // Your customer dashboard logic here
-  }
-);
-
-app.get(
-  '/mechanic-dashboard',
-  passport.authenticate('jwt', { session: false }),
-  checkUserRole('mechanic'),
-  (req, res) => {
-    // Your mechanic dashboard logic here
-  }
-);
 
 app.post('/register', async (req, res) => {
   try {
@@ -92,6 +53,7 @@ app.post('/register', async (req, res) => {
       password: hashedPassword,
       userType,
     };
+
 
     const createdUser = await userModel.createUser(newUser);
     delete createdUser.password;
@@ -115,6 +77,7 @@ app.post('/api/login', async (req, res) => {
     const userModel = new User(db);
 
     const existingUser = await userModel.getUserByEmail(email);
+  
 
     if (!existingUser) {
       return res.status(400).json({ message: 'User not found' });
@@ -130,15 +93,28 @@ app.post('/api/login', async (req, res) => {
       expiresIn: '1d',
     });
 
-    console.log('Token:', token); //  logs the token in console for debugging purpose
-
     res.header('authorization', `Bearer ${token}`);
 
     req.session.token = token;
-    res.status(200).json({ userId: existingUser._id });
+    res.status(200).json({ userId: existingUser._id, userType: existingUser.userType }); 
   } catch (error) {
     console.error('Error in /api/login:', error);
     res.status(500).json({ message: 'An error occurred during login.' });
+  }
+});
+
+app.get('/api/user-info', passport.authenticate('jwt', { session: false }), async (req, res) => {
+  try {
+    const { user } = req;
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.status(200).json({ userId: user._id, userType: user.userType });
+  } catch (error) {
+    console.error('Error in /api/user-info:', error);
+    res.status(500).json({ message: 'An error occurred while fetching user information.' });
   }
 });
 

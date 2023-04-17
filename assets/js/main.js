@@ -273,8 +273,11 @@ function initLoginForm() {
       }
 
       const userData = await response.json();
+      // logging for debugging
+      console.log(userData)
       localStorage.setItem('userId', userData.userId);
       localStorage.setItem('token', `Bearer ${response.headers.get('authorization').split(' ')[1]}`);
+      localStorage.setItem('userType', userData.userType); // Store userType
 
       updateButtonVisibility();
     } catch (error) {
@@ -284,7 +287,7 @@ function initLoginForm() {
   });
 }
 
-// Call the initLoginForm function right after the IIFE
+// Calling initLoginForm function right after the IIFE
 initLoginForm();
 
 function updateButtonVisibility() {
@@ -305,8 +308,23 @@ function updateButtonVisibility() {
 
 document.getElementById('logout-btn').addEventListener('click', () => {
   localStorage.removeItem('token');
+  localStorage.removeItem('userType'); // Remove user type when logging out
   updateButtonVisibility();
 });
+
+// Add event listener for the 'my-account-btn' button
+document.getElementById('my-account-btn').addEventListener('click', () => {
+  const userType = localStorage.getItem('userType');
+   console.log(userType)
+  if (userType === 'customer') {
+    window.location.href = 'customer-my-account.html';
+  } else if (userType === 'mechanic') {
+    window.location.href = 'mechanic-my-account.html';
+  } else {
+    alert('Unable to determine user type. Please log in again.');
+  }
+});
+
 
 // Call updateButtonVisibility on page load to set the initial button visibility
 updateButtonVisibility();
