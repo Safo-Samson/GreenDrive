@@ -70,6 +70,7 @@ my account styles for mechanic and customer
 ********************************************/
 
 .my-account-body {
+  background-color: #818181;
   font-family: "Lato", sans-serif;
   transition: background-color .5s;
 }
