@@ -325,6 +325,5 @@ document.getElementById('my-account-btn').addEventListener('click', () => {
   }
 });
 
-
 // Call updateButtonVisibility on page load to set the initial button visibility
 updateButtonVisibility();
