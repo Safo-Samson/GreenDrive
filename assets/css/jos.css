@@ -49,7 +49,9 @@ login form page (newest login method)
   background-color: white;
   color: black;
 }
-
+/*************************
+guides sub-pages
+**************************/
 .guides-subpages-content{
   margin-top: 10px;
   margin-left: 100px;
@@ -62,6 +64,18 @@ login form page (newest login method)
 .guides-title img {
   height: auto;
   max-width: 100%;
+}
+/*************************
+my account
+**************************/
+
+
+.mechanic-left-account-menu{
+  margin-top: 50px;
+  background-color: rgb(121, 121, 121);
+  width: 20%;
+  padding: 1rem;
+  transition: all 0.3s ease-out;
 }
 
 /*--------------------------------------------------------------
