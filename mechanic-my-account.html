@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>GreenDrive Hub</title> 
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon"> <!--Changes made to favicon, from apple-touch to Portfolio favicon-->
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- CSS File -->
+  <link href="assets/css/jos.css" rel="stylesheet">
+
+  <!--to get back and forward arrows-->
+  <script src="https://kit.fontawesome.com/d11fac47f6.js" crossorigin="anonymous"></script>
+  <!-- <link rel="styleshet" href="/awesomeIcons/all.css"> -->
+
+  <!--React CDN (Content Delivery Network) -- adds react to the existing html page and allows us to write react code to javaScripts to the existing page-->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!--allows us to write JSX syntax and ES6 in older browsers.-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Load our React components. 
+  <script type="text/babel" src="like_button.js"></script>
+  -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <a href="index.html" class="logo"><img src="assets/img/green drive-10.svg" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="service-provider.html">Service Providers</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="guides.html">Guides</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div>
+
+          <!-- Login & register buttons  -->
+          <button id="login-btn" class="log-reg-button" onclick="window.location.href='login.html';">Login</button>
+          <button id="signup-btn" class="log-reg-button" onclick="window.location.href='registration-form.html';">Sign Up</button>
+          <button id="my-account-btn" class="log-reg-button" style="display: none;" onclick="window.location.href='my-account.html';">My Account</button>
+          <button id="logout-btn" class="log-reg-button" style="display: none;" onclick="logout()">Log Out</button> 
+
+      </div>
+  </header><!-- End of Header -->
+    <!-- Template Main JS File -->
+    <body>
+        
+        <script src="assets/js/main.js"></script>
+    </body>
+
+
