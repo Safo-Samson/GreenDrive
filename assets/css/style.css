@@ -1118,7 +1118,7 @@ Our services
     margin-top: 40px;  not needed again because of the translate*/
     /* margin-left: 420; making the container appear on top left  same reason as above*/
     padding:  20px 30px 20px 30px;
-    background-color: #4cdd5841;
+    background-color: #4cdd587b;
     /*background-color: #3793de;*/
     border-radius: 10px; /*to make the corners of the forms rounded*/
 
@@ -1161,15 +1161,23 @@ Our services
   button[type="submit"] { /*this is called attribute selector*/
     margin-left: 40%;
     padding: 10px 20px;
-    border: none;
-    background-color: #01080e;
-    color: #fff;
-    border-radius: 3px;
+   
+
+
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   button[type="submit"]:hover {
-    background-color: #005ca3;
+    background-color: rgb(6, 201, 22);
+    color: black;
   }
 
   /***************************************************
@@ -1433,7 +1441,7 @@ Sign Up page
 }
 /* login and register buttons */
 
-.log-reg-button {
+.general-button {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 5px;
@@ -1445,7 +1453,7 @@ Sign Up page
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.log-reg-button:hover {
+.general-button:hover {
   background-color: white;
   color: black;
 }
@@ -1668,6 +1676,8 @@ Login Up
 
 .news{
   /* background-color: black; */
+  background: url(/assets/img/NewsBackground.png);
+  background-size:auto;
 }
 .news h1,h2,h3,h4,h5{
   color: rgb(5, 155, 52);
@@ -1803,7 +1813,7 @@ Login Up
     /* Caption text */
     .Green-text {
       color: #f2f2f2;
-      font-size: 15px;
+      font-size: 19x;
       padding: 8px 12px;
       position: absolute;
       bottom: 8px;
@@ -1826,15 +1836,16 @@ Login Up
       height: 15px;
       width: 15px;
       margin: 0 2px;
-      background-color: #bbb;
+      background-color: #ffffff;
       border-radius: 50%;
       display: inline-block;
       transition: background-color 0.6s ease;
+      border: 3px solid black;
     }
 
     .Green-active,
     .Green-dot:hover {
-      background-color: #201e1e;
+      background-color: #00ff37;
     }
 
     /* Fading animation */
