@@ -1441,7 +1441,7 @@ Sign Up page
 }
 /* login and register buttons */
 
-.general-button {
+.log-reg-button {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 5px;
@@ -1453,7 +1453,7 @@ Sign Up page
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.general-button:hover {
+.log-reg-button:hover {
   background-color: white;
   color: black;
 }
