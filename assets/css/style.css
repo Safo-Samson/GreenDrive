@@ -497,7 +497,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 #hero {
   width: 100%;
   height: 100vh;; 
-  background: url("../img/forestwithCar.jpg") center;
+  background: url("../img/forestwithCarSVG.svg") center;
   background-size: cover;
   background-attachment: scroll;
 }
