@@ -126,6 +126,35 @@ my account styles for mechanic and customer
   .sidenav a {font-size: 18px;}
 }
 
+/*customer dashboard*/
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.halves-section {
+  width: calc(50% - 10px);
+}
+
+.separate-row-section {
+  width: 100%;
+}
+
+.section h3,
+.section h4 {
+  color: white;
+  margin: 0;
+}
+
+
 /*--------------------------------------------------------------
 ==  const/ definate style to keep consistant with rest of app   ==
 --------------------------------------------------------------*/
