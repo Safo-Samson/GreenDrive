@@ -1607,10 +1607,11 @@ Login Up
 .guides{
   margin-top: 50px;
   background-color: #000000e6;
+  background-image: url(/assets/img/Crystal2.jpg);
 }
 
 .guides h1,h2,h3,h4,h5{
-  color: white;
+   color: white; 
   font-weight: bolder;
 }
 .guides-video-container {
