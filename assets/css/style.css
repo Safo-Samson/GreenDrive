@@ -1202,7 +1202,9 @@ dropdown in the ourServices Session
 }
 
 .recommendedMechanics{
-  margin: 50px 100px;
+  margin: 50px 10px 0 10px;
+  /* background: url(/assets/img/clouds.jpg); */
+
 }
 
 /***************************************************
@@ -2235,8 +2237,10 @@ general news
   border-style: groove;
   border-radius: 20%;
 }
-
-.explore-rating img{
-  background-color: #000000c6;
-  margin-left: -150px;
+.explore-rating{
+  background-color: #000;
 }
+/* .explore-rating img{
+  background-color: #000000;
+  margin-left: 0px;
+} */

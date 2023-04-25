@@ -45,6 +45,7 @@ links.forEach(link => {
                 // If the user is not logged in, show a login prompt or redirect them to the login page
                 alert('Please login to access our service providers');
                 window.location.href = '/login-page.html';
+                // window.location.href = '/login.html';
             }
         };
         xhr.send();
