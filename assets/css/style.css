@@ -2236,3 +2236,7 @@ general news
   border-radius: 20%;
 }
 
+.explore-rating img{
+  background-color: #000000c6;
+  margin-left: -350px;
+}
