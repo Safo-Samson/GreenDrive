@@ -657,6 +657,10 @@ body, h1, h2, h3, p {
   margin-bottom: 20px;
 }
 
+.contact{
+  background: url(/assets/img/Crystal3.jpg);
+  margin-top: 120px;
+}
 .join-btn {
   background-color: rgba(4, 85, 4, 0.781);
     border: 2px solid white;

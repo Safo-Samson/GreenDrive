@@ -655,4 +655,16 @@ my account styles for mechanic and customer
     display: block;
     margin: 0 10px;
   }
+
+  .slogan{
+    margin: 20px 150px;
+    display: inline-block;
+    background-color: #000000c5;
+    font-weight: bolder;
+    font-size: xx-large;
+    width: 80%;
+    border-radius: 15px;
+    text-align: center;
+    
+  }
   

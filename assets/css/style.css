@@ -497,7 +497,7 @@ which is a direct child of a ul element, which is a direct child of a navbar ele
 #hero {
   width: 100%;
   height: 100vh;; 
-  background: url("../img/forestwithCarSVG.svg") center;
+  background: url("../img/forestwithCar.jpg") center;
   background-size: cover;
   background-attachment: scroll;
 }
@@ -1607,10 +1607,11 @@ Login Up
 .guides{
   margin-top: 50px;
   background-color: #000000e6;
+  background-image: url(/assets/img/Crystal2.jpg);
 }
 
 .guides h1,h2,h3,h4,h5{
-  color: white;
+   color: white; 
   font-weight: bolder;
 }
 .guides-video-container {
@@ -1650,11 +1651,22 @@ Login Up
   max-width: 100%;
 }
 
+.mount-down{
+  border-radius:  0  0 50% 50%; 
+  border: 3px solid green;
+}
+
+.mount-up{
+  border-radius:  50% 50% 0  0 ; 
+  border: 3px solid green;
+}
+
 .guides-grid-item{
   background-color: #000000e6; /*doesnt how because the images covers it*/
   /* padding: 20px; */
-  border: 3px solid #249f09e6;
-  
+  /* border: 3px solid #249f09e6; */
+  background-color:#09290200;; /*completely transparent to see background of homepage*/
+
   position: relative;/* Set the grid item to position:relative to position the overlay */
 }
 .guides-grid-item img {
@@ -2182,8 +2194,8 @@ success modal
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #238f05;
-  width: 60%; /* Could be more or less, depending on screen size */
-  height: 40%;
+  width: 70%; /* Could be more or less, depending on screen size */
+  height: 60%;
   font-size: xx-large;
   text-align: center;
   color: black;
@@ -2224,3 +2236,7 @@ general news
   border-radius: 20%;
 }
 
+.explore-rating img{
+  background-color: #000000c6;
+  margin-left: -150px;
+}
