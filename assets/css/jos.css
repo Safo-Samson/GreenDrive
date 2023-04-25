@@ -49,7 +49,9 @@ login form page (newest login method)
   background-color: white;
   color: black;
 }
-
+/*************************
+guides sub-pages
+**************************/
 .guides-subpages-content{
   margin-top: 10px;
   margin-left: 100px;
@@ -63,6 +65,95 @@ login form page (newest login method)
   height: auto;
   max-width: 100%;
 }
+/******************************************
+my account styles for mechanic and customer
+********************************************/
+
+.my-account-body {
+  background-color: #818181;
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+.menu-btn{
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    z-index: 100;       
+}             
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 50;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  margin-top: 100px;
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*customer dashboard*/
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.halves-section {
+  width: calc(50% - 10px);
+}
+
+.separate-row-section {
+  width: 100%;
+}
+
+.section h3,
+.section h4 {
+  color: white;
+  margin: 0;
+}
+
 
 /*--------------------------------------------------------------
 ==  const/ definate style to keep consistant with rest of app   ==
