@@ -133,7 +133,7 @@ const span = document.getElementsByClassName('green-calendar-close')[0];
 // Function to show the modal with success message
 function showModal() {
     const successMessage = document.getElementById('success-message');
-    successMessage.textContent = `Your appointment on ${selectedDate} is successful !`;
+    successMessage.textContent = `Your appointment request on ${selectedDate} has been sent!`;
     modal.style.display = 'block';
 }
 
