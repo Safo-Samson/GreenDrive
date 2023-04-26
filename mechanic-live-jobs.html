@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="/assets/img/favicon.png" rel="icon"> <!--Changes made to favicon, from apple-touch to Portfolio favicon-->
+  
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- CSS File routing -->
+    <link href="assets/css/jos.css" rel="stylesheet">
+  
+  
+    <!--React CDN -- adds react to the existing html page and allows us to write react code to javaScripts to the existing page-->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!--allows us to write JSX syntax and ES6 in older browsers.-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body class="login-reg-body">
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+  
+        <a href="index.html" class="logo"><img src="assets/img/green drive-10.svg" alt="" class="img-fluid"></a>
+  
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service-provider.html">Service Providers</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="guides.html">Guides</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+        <div class="header-social-links">
+
+          <!-- Login & register buttons  -->
+        <button class="log-reg-button" onclick="window.location.href='login.html';">Login</button>
+        <button class="log-reg-button" onclick="window.location.href='registration-form.html';">Sign Up</button>
+
+      </div>
+    </header><!-- End Header -->
+
+    <body>
+        <h1>Live jobs</h1>
+        <div class="section separate-row-section">           
+            <h3 style="color:white">Job 1</h3>
+          </div>
+         
+          <div class="section separate-row-section">           
+            <h3 style="color:white">Job 2</h3>
+          </div>
+    </body>
+
+      <!-- ======= Footer ======= -->
+  <footer id="footer"><!--id="footer"-->
+
+    <div class="left-footer">
+      <ul>
+        <h4>Help and Support</h4>
+        <li><a href="guides.html">How it works</a></li>
+        <!-- <li> (link to guides page)</li> -->
+        <li><a href="contact.html">Contact Us</a></li>
+        <!-- <li>Contact Us</li> -->
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+
+    <div class="middle-footer header-social-links">
+      <ul>
+        <h4>Follow Us</h4>
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></i></a>
+      </ul>
+    </div>
+
+    <div class="right-footer">
+      <ul>
+        <h4>Resources</h4>
+        <li>Apply to be a mechanic</li>
+        <li>our Services</li>
+      </ul>
+    </div>
+    <!-- <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>GreenDrive Hub</span></strong> All Rights Reserved <br>
+      </div>
+    </div> -->
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/logins.js"></script>
+  <script src="/assets/js/cursor_Animate.js"></script>
+  <script>
+    //  to hide the horizontal bar that comes with the sliding
+    window.onload = function () {
+      document.body.style.overflowX = 'hidden';
+    }
+  </script>
+
+  <script>
+    const heroSection = document.getElementById("hero");
+    const h1Element = document.querySelector("h1");
+
+    if (heroSection.contains(h1Element)) {
+      h1Element.style.display = "block";
+    } else {
+      h1Element.style.display = "none";
+    }
+  </script>
+
+  <div class="cursor"></div>
+</body>
+
+</html>
