@@ -22,8 +22,8 @@ window.onclick = function (event) {
 /*************************************************
  *  To restrict access to the list of provider page
  * ***********************************************
- * This code assumes that you have a server-side endpoint at /check-login that returns a status code of 200 if the user is logged in, 
- * and a different status code (e.g. 401) if the user is not logged in. You will need to implement this 
+ * This code assumes that you have a server-side endpoint at /check-login that returns a status code of 200 if the user is logged in,
+ * and a different status code (e.g. 401) if the user is not logged in. You will need to implement this
  * endpoint on your server to check if the user is logged in or not.
  */
 
@@ -51,3 +51,23 @@ links.forEach(link => {
         xhr.send();
     })
 });
+
+
+// const links = document.querySelectorAll('.restricted-link');
+
+// links.forEach(link => {
+//     link.addEventListener('click', async function (e) {
+//         e.preventDefault();
+//         const response = await fetch('/api/user-info');
+//         console.log(response)
+//         const data = await response.json();
+//         if (response.status === 200) {
+//             // user is authenticated, continue with the link action
+//             window.location.href = link.href;
+//         } else {
+//             alert('Please login to access our service providers');
+//             // user is not authenticated, redirect to login page
+//             window.location.href = '/login.html';
+//         }
+//     })
+// });

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>My Account</title> 
+  <title>My Account</title>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="description">
@@ -64,46 +64,48 @@
 
       <div>
 
-          <!-- Login & register buttons  -->
-          <button id="login-btn" class="log-reg-button" onclick="window.location.href='login.html';">Login</button>
-          <button id="signup-btn" class="log-reg-button" onclick="window.location.href='registration-form.html';">Sign Up</button>
-          <button id="my-account-btn" class="log-reg-button" style="display: none;" onclick="window.location.href='my-account.html';">My Account</button>
-          <button id="logout-btn" class="log-reg-button" style="display: none;" onclick="logout()">Log Out</button> 
+        <!-- Login & register buttons  -->
+        <button id="login-btn" class="log-reg-button" onclick="window.location.href='login.html';">Login</button>
+        <button id="signup-btn" class="log-reg-button" onclick="window.location.href='registration-form.html';">Sign
+          Up</button>
+        <button id="my-account-btn" class="log-reg-button" style="display: none;"
+          onclick="window.location.href='my-account.html';">My Account</button>
+        <button id="logout-btn" class="log-reg-button" style="display: none;" onclick="logout()">Log Out</button>
 
       </div>
   </header><!-- End of Header -->
 
 
-        
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#">My profile</a>
-          <a href="#">My Messages</a>
-          <a href="#">Live jobs</a>
-          <a href="#">Appoinments</a>
-          <a href="#">Service History</a>
-          <a href="#">Payment history</a>
-          <a href="#">Settings</a>
-        </div>
 
-        <span style="font-size:20px;cursor:pointer" class="menu-btn" onclick="openNav()">&#9776; Menu</span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">My profile</a>
+    <a href="#">My Messages</a>
+    <a href="/customer-live-jobs">Live jobs</a>
+    <a href="#">Appoinments</a>
+    <a href="#">Service History</a>
+    <a href="#">Payment history</a>
+    <a href="#">Settings</a>
+  </div>
 
-        <div id="main">
-          <h2 style="text-align: center; color: black">Dashboard</h2>
+  <span style="font-size:20px;cursor:pointer" class="menu-btn" onclick="openNav()">&#9776; Menu</span>
 
-          <div class="content-container">
-            <div class="section halves-section">
-              <h3>My Profile</h3>
-            </div>
-            <div class="section halves-section">
-              <h3>Notifications</h3>
-            </div>
-            <div class="section separate-row-section">
-              <h3>Live jobs</h3>
-            </div>
-          </div>
-        </div>
-         <!-- ======= Footer ======= -->
+  <div id="main">
+    <h2 style="text-align: center; color: black">Dashboard</h2>
+
+    <div class="content-container">
+      <div class="section halves-section">
+        <h3>My Profile</h3>
+      </div>
+      <div class="section halves-section">
+        <h3>Notifications</h3>
+      </div>
+      <div class="section separate-row-section">
+        <h3>Live jobs</h3>
+      </div>
+    </div>
+  </div>
+  <!-- ======= Footer ======= -->
   <footer id="footer"><!--id="footer"-->
 
     <div class="left-footer">
@@ -140,20 +142,18 @@
       </div>
     </div> -->
   </footer><!-- End  Footer -->
-        <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
-        </script>
-           
-        <script src="assets/js/main.js"></script>
-    </body>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
 
+  <script src="assets/js/main.js"></script>
+</body>
