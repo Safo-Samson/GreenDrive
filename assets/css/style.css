@@ -1682,12 +1682,12 @@ Login Up
 @media screen and (max-width: 992px) { /*let the grids be square when its on phone*/
   .mount-down{
     border-radius:  0 ; 
-    border: 3px solid green;
+
   }
   
   .mount-up{
     border-radius:  0 ; 
-    border: 3px solid green;
+
   }
 }
 .guides-grid-item:hover img {
