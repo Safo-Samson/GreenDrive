@@ -1141,7 +1141,7 @@ Our services
   }
 
   .ServiceContainer{
-    /* max-width: 110px; */
+    max-width: 300px;
     background-color: #4cdd5800;
   }
 
