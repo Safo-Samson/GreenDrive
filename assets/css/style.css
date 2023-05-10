@@ -1143,6 +1143,10 @@ Our services
   .ServiceContainer{
     max-width: 110px;
   }
+
+  .OurServices .green-slide-across{
+    display: none;
+  }
   
 }
   
