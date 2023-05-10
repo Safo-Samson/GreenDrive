@@ -1807,8 +1807,10 @@ Login Up
 
     @media (max-width: 992px) {
       .Green-slideshow-container {
-        width: 150px;  /* set a fixed width */
+        width: 250px;  /* set a fixed width */
         height: 300px;
+        margin-right: 100px; 
+        margin-left: 20px;
       }
     }
     .Green-img:hover{
