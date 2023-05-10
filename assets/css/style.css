@@ -2246,6 +2246,13 @@ general news
 .explore-rating{
   background-color: #000;
 }
+
+@media (max-width: 992px) {
+  .explore-rating img{
+    max-width: fit-content;
+  }
+}
+
 /* .explore-rating img{
   background-color: #000000;
   margin-left: 0px;
