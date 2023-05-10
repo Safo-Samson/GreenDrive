@@ -88,7 +88,7 @@ time, mark, audio, video {
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
-  background: #000000;
+  background: rgb(1, 32, 1);
 }
 
 html {
@@ -138,11 +138,14 @@ body {
 
 h1 {
   font-size: 2.5em;
-  margin: 2em 0 .5em;
+  /* margin: 2em 0 .5em; */
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 h2 {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
+  font-weight: bolder;
 }
 
 em,
@@ -171,7 +174,7 @@ section:last-of-type {
 section article {
   align-self: center;
   width: 20em;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
 }
 section article p, section article:last-of-type {
   margin-bottom: 0;
@@ -811,10 +814,11 @@ label {
   margin: 0 .2em;
   cursor: pointer;
   transition: all .15s ease-in-out;
-  color: #0a4069;
+  color: #ffffff;
   border: 1px solid rgba(254, 254, 254, 0.6);
   border-radius: 0;
   flex: 1;
+  background-color: rgba(9, 9, 1, 0.929);
 }
 label:first-child {
   margin-left: 0;
@@ -836,7 +840,7 @@ input[id='pos-3']:checked ~ .actions label[for='pos-3'],
 input[id='red']:checked ~ .actions label[for='red'],
 input[id='cyan']:checked ~ .actions label[for='cyan'],
 input[id='lime']:checked ~ .actions label[for='lime'] {
-  color: #e72828;
+  color: #020202;
   border: 1px solid #031523;
   background-color: #f9fbfc;
 }
