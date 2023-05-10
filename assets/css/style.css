@@ -1916,7 +1916,7 @@ Style for slogan
   .slogan{
     text-align: center;
     margin: 20px;
-    display:contents;
+    /* display:contents;*/
   }
 }
 
