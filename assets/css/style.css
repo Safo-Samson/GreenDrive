@@ -1703,7 +1703,7 @@ Login Up
   }
 
   .guides-grid-item{
-    width: 450px;
+    max-width: 450px;
   }
 }
 
