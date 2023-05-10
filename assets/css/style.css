@@ -1682,12 +1682,10 @@ Login Up
 @media screen and (max-width: 992px) { /*let the grids be square when its on phone*/
   .mount-down{
     border-radius:  0 ; 
-
   }
   
   .mount-up{
     border-radius:  0 ; 
-
   }
 }
 .guides-grid-item:hover img {
@@ -1989,6 +1987,12 @@ sliding across
   white-space: nowrap;
   animation: slide 7s linear infinite;
   background-color: black;
+}
+
+@media screen and (max-height: 992px) {
+  .green-slide-across {
+    display: none;
+  }
 }
 
 @keyframes slide {
