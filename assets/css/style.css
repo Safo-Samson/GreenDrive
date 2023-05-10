@@ -2011,7 +2011,7 @@ sliding across
   background-color: black;
 }
 
-@media screen and (max-height: 992px) {
+@media screen and (max-height: 450px) {
   .green-slide-across {
     animation: none;
   }
