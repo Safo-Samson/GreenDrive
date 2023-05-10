@@ -1812,7 +1812,7 @@ Login Up
 
     @media (max-width: 992px) {
       .Green-slideshow-container {
-        width: 400px;  /* set a fixed width */
+        width: 380px;  /* set a fixed width */
         height: 300px;
         margin-right: 100px; 
         margin-left: 20px;
