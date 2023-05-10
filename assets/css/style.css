@@ -2094,8 +2094,8 @@ container for booking
 
 @media screen and (max-height:992){
   .green-booking-container {
-    width: 120px;
-    height: 150px;
+    max-width: 120px;
+    max-height: 150px;
   }
 }
 .green-booking-container  img {

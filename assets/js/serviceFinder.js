@@ -52,7 +52,7 @@
 
         const numberPlateRegex = /^([A-HJ-PR-Y]{2}\d{2}\s?[A-Z]{3})|(([A-HJ-PR-Y]{1}[A-Z]{1}\d{1})|([A-HJ-PR-Y]{1}\d{1}[A-Z]{1})|([A-HJ-PR-Y]{1}[A-Z]{1}\d{1}[A-Z]{1})|([A-HJ-PR-Y]{1}\d{1}[A-Z]{1}[A-Z]{1}))\s?[A-HJ-PR-Z]{3}$/i; // Regular expression for British number plate format
         if (!numberPlateRegex.test(numberPlateValue)) {
-            alert('Please enter a valid British number plate'); // Display error message if input is not a valid number plate
+            alert('Please enter a valid British number plate, like AA11 AAA'); // Display error message if input is not a valid number plate
             return; // Exit the function
         }
 
