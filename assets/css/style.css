@@ -1502,7 +1502,7 @@ Sign Up page
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   .cancelbtn, .signupbtn,.modal, .modal-content {
     width: 100%;
   }
@@ -1679,10 +1679,21 @@ Login Up
   transition: filter 0.3s ease-in-out; /* Add a transition effect to the filter property */
 }
 
-
+@media screen and (max-width: 992px) { /*let the grids be square when its on phone*/
+  .mount-down{
+    border-radius:  0 ; 
+    border: 3px solid green;
+  }
+  
+  .mount-up{
+    border-radius:  0 ; 
+    border: 3px solid green;
+  }
+}
 .guides-grid-item:hover img {
   filter: brightness(1); /* Set the brightness of the image on hover */
 }
+
 
 /*****************************************
     NEWS
