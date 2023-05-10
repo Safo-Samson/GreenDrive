@@ -1141,7 +1141,8 @@ Our services
   }
 
   .ServiceContainer{
-    max-width: 110px;
+    /* max-width: 110px; */
+    background-color: #4cdd5800;
   }
 
   .OurServices .green-slide-across{
