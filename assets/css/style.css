@@ -1668,7 +1668,7 @@ Login Up
   /* padding: 20px; */
   /* border: 3px solid #249f09e6; */
   background-color:#09290200;; /*completely transparent to see background of homepage*/
-
+  margin-bottom: 10px;
   position: relative;/* Set the grid item to position:relative to position the overlay */
 }
 .guides-grid-item img {
