@@ -2092,6 +2092,12 @@ container for booking
   border-radius: 30%;
 }
 
+@media screen and (max-height:992){
+  .green-booking-container {
+    width: 120px;
+    height: 150px;
+  }
+}
 .green-booking-container  img {
   max-width: 100%;
   height: auto;
