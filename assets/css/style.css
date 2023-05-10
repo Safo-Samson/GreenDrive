@@ -1912,6 +1912,14 @@ Style for slogan
   
 }
 
+@media screen and (max-height: 992px){
+  .slogan{
+    text-align: center;
+    font-size: medium;
+    margin: 20px;
+  }
+}
+
 /*******************************************************
     Green Animated Text
 ********************************************************/
