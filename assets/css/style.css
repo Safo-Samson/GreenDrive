@@ -1142,6 +1142,7 @@ Our services
 
   .ServiceContainer{
     position: fixed;
+    max-width: min-content;
   }
   
 }
