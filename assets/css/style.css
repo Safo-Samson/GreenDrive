@@ -1117,7 +1117,7 @@ Our services
     /* max-width: 600px;
     margin-top: 40px;  not needed again because of the translate*/
     /* margin-left: 420; making the container appear on top left  same reason as above*/
-    padding:  20px 30px 20px 30px;
+    padding:  20px 30px;
     background-color: #4cdd587b;
     /*background-color: #3793de;*/
     border-radius: 10px; /*to make the corners of the forms rounded*/
@@ -1141,8 +1141,7 @@ Our services
   }
 
   .ServiceContainer{
-    position: fixed;
-    max-width: 90px;
+    max-width: 110px;
   }
   
 }
