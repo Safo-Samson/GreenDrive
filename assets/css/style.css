@@ -2097,6 +2097,10 @@ container for booking
     max-width: 120px;
     max-height: 150px;
   }
+
+  .green-booking-container  img{
+    max-width: fit-content;
+  }
 }
 .green-booking-container  img {
   max-width: 100%;
