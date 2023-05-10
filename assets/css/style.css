@@ -2010,7 +2010,7 @@ sliding across
 
 @media screen and (max-height: 992px) {
   .green-slide-across {
-    display: none;
+    animation: none;
   }
 }
 
