@@ -2260,7 +2260,8 @@ general news
 
 @media (max-width: 992px) {
   .explore-rating img{
-    max-width: fit-content;
+    /* max-width: 90px; */
+    display: none;
   }
 }
 
