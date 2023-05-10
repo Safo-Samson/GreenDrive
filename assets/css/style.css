@@ -1133,8 +1133,18 @@ Our services
       and to the left by 50% of its own height and width respectively, 
       effectively centering it both horizontally and vertically.
 */
+}
 
+@media screen and (max-height: 992px) {
+  .OurServices {
+    background-image: cover;
   }
+
+  .ServiceContainer{
+    position: fixed;
+  }
+  
+}
   
   form {
     /*display: block; /*making it flex will make it lie side by side*/
