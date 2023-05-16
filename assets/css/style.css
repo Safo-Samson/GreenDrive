@@ -1411,7 +1411,7 @@ Sign Up page
 
 /* Full-width input fields */
 
-.signup  input[type=text], input[type=password] {
+.signup  input[type=email], input[type=password] {
   width: 100%; /* width of that page that shows up when the sign up is clicked*/
   padding: 10px;
   margin: 5px 0 5px 0;
@@ -1584,7 +1584,7 @@ Login Up
 .login .container {
   padding: 16px;
 }
-.login input[type=text], input[type=password] {
+.login input[type=email], input[type=password] {
   width: 100%; /* width of that page that shows up when the sign up is clicked*/
   padding: 10px;
   margin: 5px 0 5px 0;
