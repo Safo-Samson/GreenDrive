@@ -28,7 +28,7 @@ window.onclick = function (event) {
  */
 
 
-const links = document.querySelectorAll('.restricted-link'); /*The way to get and apply functions to multiple elements */
+const links = document.querySelectorAll('.restricted-linkss'); /*meant to be .restricted-link, i added the double ss just to skip this process for the interview demo */
 
 links.forEach(link => {
     link.addEventListener('click', function (e) {

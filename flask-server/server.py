@@ -3,7 +3,7 @@
 from flask import Flask, jsonify
 from flask import Flask, jsonify, request, make_response
 import requests
-from flask_cors import CORS
+
 
 
 # app = Flask(__name__)
@@ -48,7 +48,7 @@ def find_vehicle():
     # registration_number = data['numberPlate']
 
     if request.method == 'GET':
-        registration_number = 'FX09OHW'
+        registration_number = 'GF57XWD' #FX09OHW
         api_key = 'mDKpeAwFn72aQKOS8cBxV5KB9hvfjVMD8NRLCmtP'
         url = 'https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles'
         headers = {
@@ -62,6 +62,7 @@ def find_vehicle():
 
         if response.status_code == 200:
             vehicle_info = response.json()
+            print(vehicle_info)
             return jsonify(vehicle_info)
         else:
             return jsonify({'error': 'Invalid registration number'})
