@@ -68,7 +68,7 @@
   </header><!-- End Header -->
 
   <section class="login-reg-form-section">
-  <h1>Registration Form</h1>
+  <h1>Login</h1>
   <br>
   <div class="log-reg-container">
   <form id="register-form">
@@ -82,7 +82,7 @@
       <option value="mechanic">Mechanic</option>
     </select>
     <br><br>
-    <button class="log-reg-button2" type="submit">Register</button>
+    <button class="log-reg-button2" type="submit">Login</button>
   </form>
   </div>
 </section>
@@ -91,7 +91,33 @@
   <h1 style="font-weight: bolder; color: white">Drive Into The Future...</h1>
 </div>
 
-  <script src="/assets/js/register.js"></script>
+  <!-- <script src="/assets/js/register.js"></script> -->
+
+  <script>
+
+  var loginForm = document.getElementById("register-form");
+
+  // Add a submit event listener to the form
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Get the selected user type
+    var userType = document.getElementById("userType").value;
+
+    // Define the URL for redirection based on user type
+    var redirectUrl;
+
+    if (userType === "customer") {
+      redirectUrl = "customer-my-account.html"; // Change to the customer's account page
+    } else if (userType === "mechanic") {
+      redirectUrl = "mechanic-my-account.html"; // Change to the mechanic's account page
+    }
+
+    // Redirect to the specified URL
+    window.location.href = redirectUrl;
+  });
+</script>
+
 
 </body>
 </html>
